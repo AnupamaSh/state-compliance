@@ -39,13 +39,6 @@ jQuery(document).ready(function($) {
     });
     wow.init();
 
-    // function reloadStylesheets() {
-    //     var queryString = '?reload=' + new Date().getTime();
-    //     $('link[rel="stylesheet"]').each(function() {
-    //         this.href = this.href.replace(/\?.*|$/, queryString);
-    //     });
-    // }
-
 
     // ---------------------------ADIVOSOR CAROUSEL
     var questionnaire = $("#questionnaire-carousel");
@@ -84,21 +77,37 @@ jQuery(document).ready(function($) {
         questionnaire.trigger('owl.goTo', page_num - 1);
         current_page = page_num;
         $('.prev-verify').css('visibility', current_page == 1 ? 'hidden':'visible');
-        $('.next-verify').css('visibility', current_page == 7 ? 'hidden':'visible');
+        $('.next-verify').css('visibility', current_page == 14 ? 'hidden':'visible');
     }
 
     $('body').on('click', '.next-verify', function() {
-        if (current_page < 7) {
-            if ([3, 4, 5, 6].indexOf(current_page) > -1) { //Check that at least one checkbox has been checked in slides 3, 4, 5, 6, 7
-                if (min_selected(current_page)) {
-                    go_to_page(current_page + 1)
-                } else {
-                    $('.error-message').text("Please select at least one option.").show().delay(5000).fadeOut();
-                }
-            } else { //Go on to the next slide
-                go_to_page(current_page + 1)
+        if (current_page < 3) {
+            if ($('#q'+current_page+'-none').prop('checked')){
+                generatereport("report-unregulated")
+            } else {go_to_page(current_page + 1)
             }
-        }
+        } else if (current_page < 14) {
+
+                if (current_page==11){
+                    var x=0
+                    for (var i = 4; i < 12; i++){
+                        if ($('#q'+i+'-no').prop('checked')){
+                         x++;     
+                        }
+                    }
+                    if (x==8){generatereport("report-no-action")}
+                }
+                if ([3, 4, 5, 6].indexOf(current_page) > -1) { //Check that at least one checkbox has been checked in slides 3, 4, 5, 6, 7
+                    if (min_selected(current_page)) {
+                        go_to_page(current_page + 1)
+                    } else {
+                        $('.error-message').text("Please select at least one option.").show().delay(5000).fadeOut();
+                    }
+                } else { //Go on to the next slide
+                    if (current_page == 13){$('.next-verify').css('visibility', 'hidden');} 
+                    go_to_page(current_page + 1)
+                }
+            }
     });
 
     $('body').on('click', '.prev-verify', function() {
@@ -140,19 +149,114 @@ jQuery(document).ready(function($) {
         }
     });
 
+    //----------------GENERATES REPORT-----------------
+    $('body').on('click', '.button-generate-report', function() {
+        var report = ''
+        generatereport(report) 
+    });
 
+    function generatereport(reporttype) {
+        var revenue = $("#revenue").val();
+        $('#q1 :checkbox:checked').each(function() {
+                    $('#q1-text').append(', '+$(this).val());   
+        });
+        if (reporttype){
+            $('#report').show();
+            $('#'+ reporttype).show();
 
-    //---------------------------SCREENDOOR FORM
-    new FormRenderer({
-        "project_id": 683,
-        "afterSubmit": {
-          "method": "page",
-          "html": "<p>Thanks for submitting our form!</p>"
+            //Scroll to report part of page
+                $('html, body').animate({
+                    scrollTop: $("#report").offset().top - 40
+                }, 1000);
         }
-      });
+            else{
+                if (min_selected(current_page)) {
+                var options = {};
+                $.each($('input[name="question"]'), function(index, value) {
+                    options[this.id] = this.checked ? 1 : 0;
+                });
 
+                if (min_selected(12) && (!$('#q12-no').prop('checked'))){
+                    if ($('#q16-yes').prop('checked')){$('#q16-true').show()}
+                    generatereport("report-exemption")
+                }else if ($('#q12-no').prop('checked')){
+                    var atLeastOneIsChecked = $('input[class="apply"]:checked').length > 0;
+                    if (atLeastOneIsChecked){
+                        if ($('#q3-yes').prop('checked')){$('.agents').show(); $('#agent-fee').append($("#agents").val() * 200)}
+                        if ($('#q4-yes').prop('checked')){$('#q4-true').show()}
+                        if ($('input[class="q5-apply"]:checked')){$('#q5-true').show()}
+                        if ($('#q6-yes').prop('checked')){$('#q6-true').show()}
+                        if ($('input[class="q7 apply"]:checked')){$('#q7-true').show()}
+                        if ($('#q8-yes').prop('checked')){$('#q8-true').show()}
+                        if ($('input[class="q9 apply"]:checked')){$('#q9-true').show()}
+                        if ($('input[class="q10 apply"]:checked')){$('#q10-true').show()}
+                        if ($('#q11-yes').prop('checked')){$('#q11-true').show();$('#register-institution').show()}
+                        if ($('#q14-yes').prop('checked')){$('#q14-true').show()}
+                        $('#revenue_text').append(revenue);
+                        if (revenue > 1000000) { $('#fee').append("$5,000");} else if (1000000 >= revenue > 500000){$('#fee').append("$3,000");
+                        }else if (500000 >=revenue > 250000){$('#fee').append("$2,000");} else if (250000 >= revenue > 50000){$('#fee').append("$1,000");
+                        } else if (revenue < 50000){$('#fee').append("$500");}
+                        if ($('input[class="calculus1"]:checked')){
+                            $('#calculus').append(1000+ ($("#agents").val() * 200));
+                    } else if ($('input[class="calculus2"]:checked')) {
+                        var license_fee = 0
+                        var bond_fee =0
+                        if ($('#q1-non-degree').prop('checked')){license_fee=1000} else if ($('#q1-degree').prop('checked')){license_fee=4000}
+                        if ((.20 * revenue) < 5000){bond_fee=5000} else {bond_fee = (.20 * revenue)}
+                        $('#calculus').append(license_fee+bond_fee+250)
+                }
+                        generatereport("report-apply")
+                    }
+                }
 
-
+                //if (options[])
+                // var point = $.map($('input[name="question"]'), function(value, index) {
+                //     return value.checked ? 1 : 0;
+                // });
+                // $('.report-category-heading').hide();
+                // $('#report').hide();
+                // $('.relevant-case-study-list').empty();
+                // for (var key in options) {
+                //     if (options[key]) {
+                //         $('.' + key).show();
+                //         $('.' + key.substring(0, 2)).show();
+                //     } else {
+                //         $('.' + key).hide();
+                //     }
+                // }
+              //   var points = [];
+              //   for (var o in items) {
+              //       points.push(items[o].scores);
+              //   }
+              //   var tree = createKDTree(points);
+              //   var candidates = tree.knn(point, 5);
+              //   console.log(candidates);
+              //   var new_case_study = _.template(case_study_template);
+              //   for (var i in candidates) {
+              //       if (items[candidates[i]]['title'] != 'EMPTY EXAMPLE') {
+              //           var data = {
+              //               "url": items[candidates[i]]['url'].replace(".", "-"),
+              //               "title": items[candidates[i]]['title']
+              //           }
+              //           console.log(data);
+              //           $(".relevant-case-study-list").append(new_case_study(data));
+              //       }
+              //   }
+                $('#report').show();
+             //   $('#relevant-case-studies').show();
+                $('#academy-info').show();
+              //  gridContainer.cubeportfolio('destroy');
+              //  gridContainer.cubeportfolio(options_portfolio);
+                //Scroll to report part of page
+                $('html, body').animate({
+                    scrollTop: $("#report").offset().top - 40
+                }, 1000);
+            } else {
+                $('.error-message').text("Please select at least one option.").show().delay(5000).fadeOut();
+            }
+        }
+   
+    }
 
 
     //-------------------Accordion Change Chevron--------
@@ -181,218 +285,6 @@ jQuery(document).ready(function($) {
         navigationText: ['<i class="pe-7s-angle-left-circle pe-3x"></i>', '<i class="pe-7s-angle-right-circle pe-3x"></i>'],
     });
 
-    // (loadPortfolio($, window, document, undefined))(jQuery, window, document);
-    //LIGHTBOX GALLERY
-
-
-
-
-
-    // init cubeportfolio
-    var options_portfolio = {
-        defaultFilter: '*',
-        animationType: 'flipOut',
-        gapHorizontal: 45,
-        gapVertical: 30,
-        gridAdjustment: 'responsive',
-        caption: 'minimal',
-        displayType: 'lazyLoading',
-        displayTypeSpeed: 100,
-        // lightbox
-        lightboxDelegate: '.cbp-lightbox',
-        lightboxGallery: true,
-        lightboxTitleSrc: 'data-title',
-        lightboxShowCounter: false,
-        // singlePage popup
-        singlePageDelegate: '.cbp-singlePage',
-        singlePageDeeplinking: true,
-        singlePageStickyNavigation: false,
-        singlePageShowCounter: false,
-        singlePageCallback: function(url, element) {
-            // to update singlePage content use the following method: this.updateSinglePage(yourContent)
-            var t = this;
-            $.ajax({
-                url: url,
-                type: 'GET',
-                dataType: 'html',
-                timeout: 5000
-            })
-                .done(function(result) {
-                    t.updateSinglePage(result);
-                })
-                .fail(function() {
-                    console.log("error");
-                    t.updateSinglePage("Error! Please refresh the page!");
-                });
-        },
-        // single page inline
-        singlePageInlineDelegate: '.cbp-singlePageInline',
-        singlePageInlinePosition: 'above',
-        singlePageInlineShowCounter: false,
-        singlePageInlineInFocus: true,
-        singlePageInlineCallback: function(url, element) {
-            // to update singlePage Inline content use the following method: this.updateSinglePageInline(yourContent)
-        }
-    }
-
-    var gridContainer = $('#grid-container');
-    var type_filtersContainer = $('#type-filters-container');
-    var scope_filtersContainer = $('#scope-filters-container');
-    var filterContainers = $('.s-filters');
-    gridContainer.cubeportfolio(options_portfolio);
-
-    //----------------------- TYPE FILTERS CONTAINER
-    filterContainers.on('click', '.cbp-filter-item', function(e) {
-        var me = $(this),
-            wrap;
-        // get cubeportfolio data and check if is still animating (reposition) the items.
-        if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
-            if (type_filtersContainer.hasClass('cbp-l-filters-dropdown')) {
-                wrap = $('.cbp-l-filters-dropdownWrap');
-                wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
-                wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
-                me.addClass('cbp-filter-item-active');
-            } else {
-                me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
-            }
-        }
-        // filter the items\
-        var filters = $('.cbp-filter-item-active').map(function() {
-            return $(this).data('filter');
-        }).toArray().join('');
-        //filters = filters.replace('*.','.').replace('.*.','.').replace('.*', '').replace('**', '*');
-        if (filters == '*****') {
-            filters = '*';
-        } else {
-            filters = filters.replace(/\*{1,}/g, '');
-        }
-        console.log(filters);
-        gridContainer.cubeportfolio('filter', filters, function() {});
-    });
-
-
-
-    // activate counters
-    gridContainer.cubeportfolio('showCounter', type_filtersContainer.find('.cbp-filter-item'));
-
-
-    var items = {{items}}
-    var case_study_template = '<li class="cbp-item">' +
-        '<div class="cbp-caption">' +
-        '<div class="cbp-caption-defaultWrap">' +
-        '<img src="img/casestudies/<%= url %>-small.png" alt="" width="100%">' +
-        '</div>' +
-        '<div class="cbp-caption-activeWrap">' +
-        '<div class="cbp-l-caption-alignCenter">' +
-        '<div class="cbp-l-caption-body">' +
-        '<a href="ajax/<%= url %>.html" class="cbp-singlePage cbp-l-caption-buttonLeft"><i class="pe-3x pe-7s-plus"></i></a>' +
-        '<a href="img/casestudies/<%= url %>-big.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Dashboard<br>by Paul Flavius Nechita"><i class="pe-3x pe-7s-search"></i></a>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '<div class="cbp-l-grid-projects-title"><%= title %></div>' +
-        '</li>';
-
-    //----------------GENERATES REPORT-----------------
-    $('#questionnaire').on('click', '.button-generate-report', function() {
-        if (min_selected(current_page)) {
-            var options = {};
-            $.each($('input[name="question"]'), function(index, value) {
-                options[this.id] = this.checked ? 1 : 0;
-            });
-            var point = $.map($('input[name="question"]'), function(value, index) {
-                return value.checked ? 1 : 0;
-            });
-            $('.report-category-heading').hide();
-            $('#report').hide();
-            $('.relevant-case-study-list').empty();
-            for (var key in options) {
-                if (options[key]) {
-                    $('.' + key).show();
-                    $('.' + key.substring(0, 2)).show();
-                } else {
-                    $('.' + key).hide();
-                }
-            }
-            var points = [];
-            for (var o in items) {
-                points.push(items[o].scores);
-            }
-            var tree = createKDTree(points);
-            var candidates = tree.knn(point, 5);
-            console.log(candidates);
-            var new_case_study = _.template(case_study_template);
-            for (var i in candidates) {
-                if (items[candidates[i]]['title'] != 'EMPTY EXAMPLE') {
-                    var data = {
-                        "url": items[candidates[i]]['url'].replace(".", "-"),
-                        "title": items[candidates[i]]['title']
-                    }
-                    console.log(data);
-                    $(".relevant-case-study-list").append(new_case_study(data));
-                }
-            }
-            $('#report').show();
-            $('#relevant-case-studies').show();
-            $('#academy-info').show();
-            gridContainer.cubeportfolio('destroy');
-            gridContainer.cubeportfolio(options_portfolio);
-            //Scroll to report part of page
-            $('html, body').animate({
-                scrollTop: $("#report").offset().top - 40
-            }, 1000);
-        } else {
-            $('.error-message').text("Please select at least one option.").show().delay(5000).fadeOut();
-        }
-    });
-
-
-    // ---------------------------------------------------------------add listener for load more click
-    $('.cbp-l-loadMore-button-link').on('click', function(e) {
-        e.preventDefault();
-        var clicks, me = $(this),
-            oMsg;
-        if (me.hasClass('cbp-l-loadMore-button-stop')) return;
-        // get the number of times the loadMore link has been clicked
-        clicks = $.data(this, 'numberOfClicks');
-        clicks = (clicks) ? ++clicks : 1;
-        $.data(this, 'numberOfClicks', clicks);
-
-        // set loading status
-        oMsg = me.text();
-        me.text('LOADING...');
-
-        // perform ajax request
-        $.ajax({
-            url: me.attr('href'),
-            type: 'GET',
-            dataType: 'HTML'
-        })
-            .done(function(result) {
-                var items, itemsNext;
-                // find current container
-                items = $(result).filter(function() {
-                    return $(this).is('div' + '.cbp-loadMore-block' + clicks);
-                });
-                gridContainer.cubeportfolio('appendItems', items.html(),
-                    function() {
-                        // put the original message back
-                        me.text(oMsg);
-                        // check if we have more works
-                        itemsNext = $(result).filter(function() {
-                            return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
-                        });
-                        if (itemsNext.length === 0) {
-                            me.text('NO MORE WORKS');
-                            me.addClass('cbp-l-loadMore-button-stop');
-                        }
-                    });
-            })
-            .fail(function() {
-                // error
-            });
-    });
 
     //PARALLAX BACKGROUND
     $(window).stellar({
