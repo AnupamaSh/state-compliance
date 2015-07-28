@@ -4,7 +4,7 @@
 <!-- Don't know how to connect the logic of if "etc" true show "this" but it should be pretty easy for you since everything is pointed out and you just have to copy/paste the unique identifier that I mention. KEWL. Show text unless conditioned-->	
 
 
-<div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
+<div id="report-apply" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
 <div class="service">
 <i class="fa fa-list fa-3x"></i>
 <h2>Apply for Authorization</h2>
@@ -13,19 +13,18 @@
 
 <!-- Client Description-->	
 
-<li>Because you are a [ADD CONTENT OF “q1-private” and/or “q1-public” and/or “q1-np” and/or “q1-fp” and/or “q1-degree” and/or “q1-non-degree” and/or “q1-reli” and/or “q1-voc” IF TRUE] institution, your institution is regulated by the New Mexico Higher Education Department.</li>
+<li>Because you are a <span id="q1-text"></span> institution, your institution is regulated by the New Mexico Higher Education Department.</li>
 
 <li>Because your Institution is:</li>
 <ul>
-	<li>[IF “q4-yes” true SHOW] Offering programs that lead to New Mexico licensure;</li>
-	<li>[IF “q5-seminars” OR “q5-intern” OR “q5-independent” true SHOW] Having seminars, conferences and/or internships;</li>
-	<li>[If “q6-yes” true SHOW] Meeting for more than 40 hrs, $500, and one course in sequence;</li>
-	<li>[If "q7-physical" OR “q7-non-instructional" OR "q7-both" OR "q7-equipment" OR "q7-out" OR "q7-enrollment" OR "q7-support" true SHOW] Maintaining a location, site, server, phone and/or address;</li>
-	<li>[If “q8-yes” true SHOW] Contracts to provide students with services;</li>
-	<li>[If "q9-print" OR "q9-radio" OR q9-tv true SHOW] State advertising;</li>
-	<li>[If "q10-full" OR "q10-adjunct" OR "q10-fullwyo" OR "q10-adjwyo" true SHOW] Employing any faculty; and,</li>
-	<li>[If “q11-yes” true SHOW] Offering distance ed to NM students and employing recruiting agents in New Mexico</li>
-	<li></li>
+	<li id="q4-true" style="display:none">Offering programs that lead to New Mexico licensure;</li>
+	<li id="q5-true" style="display:none">Having seminars, conferences and/or internships;</li>
+	<li id="q6-true" style="display:none">Meeting for more than 40 hrs, $500, and one course in sequence;</li>
+	<li id="q7-true" style="display:none">Maintaining a location, site, server, phone and/or address;</li>
+	<li id="q8-true" style="display:none">Contracts to provide students with services;</li>
+	<li id="q9-true" style="display:none">State advertising;</li>
+	<li id="q10-true" style="display:none">Employing any faculty; and,</li>
+	<li id="q11-true" style="display:none">Offering distance ed to NM students and employing recruiting agents in New Mexico</li>
 </ul>
 
 <!-- General Application Process -->	
@@ -35,7 +34,7 @@
 <li>Application Process</li>
 <ul>
 	<li>There are two types of authorization in New Mexico: Licensure and Registration. Each type of authorization has different requirements for the process to apply and fees. </li>
-	<li>[If “q14-yes” true SHOW] Because you are a <strong> multi-institution system </strong>, each institution within your organization in New Mexico must apply for authorization individually;</li>
+	<li id="q14-true" style="display:none">Because you are a <strong> multi-institution system </strong>, each institution within your organization in New Mexico must apply for authorization individually;</li>
 	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
 	<li>The initial authorization application process generally takes 6 to 9 months.</li>
 </ul>
@@ -50,7 +49,7 @@
 <li>Licensing Institutions Process</li>
 <ul>
 	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li>Because your annual gross tuition revenue is [ANSWER OF SCREEN 15 Q14], your renewal fee will be $ [corresponding range below], which will be due annually by July 1.</li>
+	<li>Because your annual gross tuition revenue is $<span id="revenue_text"></span>, your renewal fee will be <span id="fee"></span>, which will be due annually by July 1.</li>
 
 	<!-- Here the range from which you have to create the IF/THEN logic 
 	[Less than $50,000 annual gross tuition revenue: $500
@@ -60,10 +59,29 @@
 	Greater than $1M annual gross tuition revenue: $5,000)] -->
 
 </ul>
+<div id ="register-institution">
+<h3>Registering Institution</h3><!-- [If “Yes” to Screen 5 and 14 + no “No” selected on any Screen 7 - 13]-->
+<ul>
+	<li>Because your institution is only triggering activity in New Mexico because it is offering distance education from a state other than New Mexico and are actively recruiting students in NM, your institution needs to apply to Register in New Mexico. <li>
+<!--[POPUP FROM THE WORD REGISTER ABOVE] The New Mexico Higher Education Department calls authorization to operate for institutions like yours “Registration”-->
+<li>Application forms can be obtained under Registration at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
+<li>Your Registration Renewal Fee will be $1,000, due annually by July 1st.</li>
+</ul>
+</div>
+<div class="agents" style="display:none">
+<h3>Because you have Recruiting Agents in New Mexico</h3>, apply to register them for agent authorization:
+<ul>
+<li>Please access the recruiting agent authorization form at the following website by clicking on "Agent Authorization":
+ 	http://www.hed.state.nm.us/institutions/applications.aspx </li>
+<li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
+</ul>
+</div>
 
 <h3>Authorization Fee Estimate</h3>
 <ul>
-	<li>The total cost estimate for your institution to Apply for Authorization with New Mexico Higher Education Department state authorization regulations is $D CALCULUS 2</li>
+	<li>The total cost estimate for your institution to Apply for Authorization with New Mexico Higher Education Department state authorization regulations is <strong>$<span id="calculus"></span></strong></li>
+	 <li class="agents" style="display:none">This estimate includes an agent fee of $200 per agent, which totals <strong>$<span id="agent-fee"></span></strong></li>
+	</ul>
 
 <h3>Change Fees</h3>
 <p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
