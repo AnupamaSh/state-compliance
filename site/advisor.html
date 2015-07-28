@@ -88,7 +88,7 @@
             	<div class="col-lg-12 text-center">
             		<h1 class="wow fadeInDown">The NYU State Authorization Advisor</span></h1>
                 </div>
-            </div>
+        </div>
 		<section id="questionnaire" data-stellar-background-ratio="0.9">
         	<div class="container">
 
@@ -101,72 +101,63 @@
             		<div class="custom-page 6"><span class="custom-number">6</span></div>
             		<div class="custom-page 7"><span class="custom-number">7</span></div>
             		<div class="custom-page 8"><span class="custom-number">8</span></div>
+            		<div class="custom-page 9"><span class="custom-number">9</span></div>
+            		<div class="custom-page 10"><span class="custom-number">10</span></div>
+            		<div class="custom-page 11"><span class="custom-number">11</span></div>
+            		<div class="custom-page 12"><span class="custom-number">12</span></div>
+            		<div class="custom-page 13"><span class="custom-number">13</span></div>
+            		<div class="custom-page 14"><span class="custom-number">14</span></div>
             	</div>
                 
-                <div id="questionnaire-carousel" class="owl-carousel owl-theme">
+    <div id="questionnaire-carousel" class="owl-carousel owl-theme">
+ 
+    <!-- Screen 1 -->
 
-    <div class="item col-lg-8">
-    	<h4 class="uppercase">The NYU State Authorization Advisor will help you answer the following questions:</h4>
+    <div class="item col-lg-8" id ="q1">
+    		<h4 class="uppercase">Your state authorization advisor will help you determine if your program or institution should seek authorization with the New Mexico Higher Education Department, or take some other action. </h4>
 
-		<ul>
-			<li>Does my Institution need Approval?</li>
-			<li>How long will it take? </li>
-			<li>How much will it cost?</li>
-			<li>Should I join NC-SARA?</li>
-			<li>Can my Institution apply for exemption?</li>
-			<li>What are the next steps?</li>
-		</ul>
-    </div>
-    
-    <!-- Screen 2 -->
-    <div class="item col-lg-8">
-    	<h4 class="uppercase">Does your Institution requires State authorization from New Mexico?</h4>
-        <p class="questionnaire-intro">According to the <a href="http://www.hed.state.nm.us/">New Mexico Higher Education Department (NMHED)</a>, a program or institiution is considered to have a physical presence in New Mexico if it offers courses, programs or degrees on-site or from a geographical site in New Mexico, or if it maintains an administrative, corporate or other address in the state. Based on the responses your provide, your state authorization advisor will help you to determine if your program or institution should seek authorization with the New Mexico Higher Education Department, or take some other action.</p>
-        <ul>
-			<li>Click <strong> "next" </strong> to begin the process to determine the approriate course of action for your institution.</li>
-		</ul>
-    </div>
-                    
-    <div class="item col-lg-8">
-    	<h4 class="uppercase">Is your institution...</h4>
+		<h4 class="uppercase">Is your institution...</h4>
         <p class="question-prompt"><span class="question-number">1. </span>Please select all that apply:</p>
         <div class="answer-choice">
-        	<label for="q1-tasks"><input type="checkbox" name="question" id="q1-tasks">Private </label>
+        	<label for="q1-private"><input type="checkbox" name="question" id="q1-private" value="Private">Private </label>
         </div>
         <div class="answer-choice">
-        	<label for="q1-data"><input type="checkbox" name="question" id="q1-data">Public </label>
+        	<label for="q1-public"><input type="checkbox" name="question" id="q1-public" value="Public">Public </label>
         </div>
         <div class="answer-choice">
-        	<label for="q1-funds"><input type="checkbox" name="question" id="q1-funds">Non-profit </label>
+        	<label for="q1-np"><input type="checkbox" name="question" id="q1-np" value="Non-Profit">Non-profit </label>
         </div>
         <div class="answer-choice">
-        	<label for="q1-opinions"><input type="checkbox" name="question" id="q1-opinions">For-profit </label>
+        	<label for="q1-fp"><input type="checkbox" name="question" id="q1-fp" value="For-profit">For-profit </label>
         </div>
 		<div class="answer-choice">
-			<label for="q1-ideas"><input type="checkbox" name="question" id="q1-ideas">Degree-granting </label>
+			<label for="q1-degree"><input type="checkbox" name="question" id="q1-degree" value="Degree Granting">Degree-granting </label>
 		</div>
 		<div class="answer-choice">
-			<label for="q1-ideas"><input type="checkbox" name="question" id="q1-ideas">Non-degree-granting </label>
+			<label for="q1-non-degree"><input type="checkbox" name="question" id="q1-non-degree" value="None degree granting">Non-degree-granting </label>
 		</div>
 		<div class="answer-choice">
-			<label for="q1-ideas"><input type="checkbox" name="question" id="q1-ideas">Religious </label>
+			<label for="q1-reli"><input type="checkbox" name="question" id="q1-reli" value="Religious">Religious </label>
 		</div>
 		<div class="answer-choice">
-			<label for="q1-ideas"><input type="checkbox" name="question" id="q1-ideas">Career-vocational </label>
+			<label for="q1-voc"><input type="checkbox" name="question" id="q1-voc" value="Career-vocational">Career-vocational </label>
 		</div>
 		<div class="answer-choice">
-			<label for="q1-ideas"><input type="checkbox" name="question" id="q1-ideas">None of the above </label>
+			<label for="q1-none"><input type="checkbox" name="question" id="q1-none" value="none">None of the above </label>
 		</div>
-	</div>
+    </div>
+    
+
+    <!-- Screen 2; Q2 -->
 
 	<div class="item col-lg-8">
 		<h4 class="uppercase">Is your institution accredited by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department?</h4>
-		<div class="accordion" id="accordion2">
+		<div class="accordion" id="accordion1">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="fa fa-chevron-circle-right"></i> Currently non-accredited but planning to work towards accreditation?</p>
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne"><i class="fa fa-chevron-circle-right"></i> Currently non-accredited but planning to work towards accreditation?</p>
 				</div>
-				<div id="collapseTwo" class="accordion-body collapse">
+				<div id="collapseOne" class="accordion-body collapse">
 					<div class="accordion-inner">
 						Non-accredited institutions may go through the authorization process, but must demonstrate a plan to become accredited within three years.  
 					</div>
@@ -175,21 +166,23 @@
 		</div>
 	    <p class="question-prompt"><span class="question-number">2. </span>If your institution can meet this criteria, select <strong> "yes" </strong>. </p>
 		<div class="answer-choice">
-			<label for="q2-finance"><input type="checkbox" name="question" id="q2-finance">Yes</label>
+			<label for="q2-yes"><input type="checkbox" name="question" id="q2-yes">Yes</label>
 		</div>
 		<div class="answer-choice">
-			<label for="q2-knowledge"><input type="checkbox" name="question" id="q2-knowledge">No</label>
+			<label for="q2-no"><input type="checkbox" name="question" id="q2-none">No</label>
 		</div>
 	</div>
 
+    <!-- Screen 3; Q3 -->
+
 	<div class="item col-lg-8">
-    	<h4 class="uppercase">Does your institution employee any agents who provide organized, consistent, on-the-ground recruiting of students in New Mexico? </h4>
-    	<div class="accordion" id="accordion3">
+    	<h4 class="uppercase">Does your institution employee any agents who provide organized, consistent, on-the-ground recruiting of students in New Mexico? If yes, how many? </h4>
+    	<div class="accordion" id="accordion2">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree"><i class="fa fa-chevron-circle-right"></i> What about agents that provide occasional recruiting?</p>
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="fa fa-chevron-circle-right"></i> What about agents that provide occasional recruiting?</p>
 				</div>
-				<div id="collapseThree" class="accordion-body collapse">
+				<div id="collapseTwo" class="accordion-body collapse">
 					<div class="accordion-inner">
 						For ONLY occasional recruiting of students outside of your institution's home state (i.e. job fairs in New Mexico) by your institution's employees or agents, Select "No".If agents recruit at re-occuring events, select "Yes". 
 					</div>
@@ -198,303 +191,297 @@
 		</div>
         <p class="question-prompt"><span class="question-number">3. </span>If your institution can meet this criteria, select <strong> "yes" </strong>.</p>
 		<div class="answer-choice">
-			<label for="q3-yes"><input type="checkbox" name="question" id="q3-yes">Yes</label><span class="option-explanation"></span>
+			<label for="q3-yes"><input type="checkbox" name="question" id="q3-yes">Yes, <input type="number" name="agents" id="agents"></label><span class="option-explanation"></span>
 		</div>
 		<div class="answer-choice">
-			<label for="q3-no"><input type="checkbox" name="question" id="q3-no">No</label><span class="option-explanation"></span>
+			<label for="q3-no"><input type="checkbox" name="question" id="q3-no">No, employee any agents who provide organized, consistent, on-the-ground recruiting of students in New Mexico</label><span class="option-explanation"></span>
 		</div>
 	</div>
 
-	<!-- Screen -->
-	<div class="item col-lg-8">
-    	<h4 class="uppercase">How many employees or agents does your institution have that provide organized, consistent, on-the-ground recruiting of students in New Mexico?</h4>
-        <p class="question-prompt"><span class="question-number">4. </span>Please give us a specific number:</p>
-		<div class="answer-choice"><label for="q4-mobile"><input type="checkbox" name="question" id="q4-mobile">***Space to give a number***</label></div>
-	</div>
+	<!-- Screen 4; Q4 -->
 
-	<!-- Screen -->
 	<div class="item col-lg-8">
-		<h4 class="uppercase">Does your institution offer programs that lead to licensure and/or that require external approval from a seperate organization or entity ( e.g. nursing, education, cosmetology, trucking, etc.)?</h4>
-		<div class="accordion" id="accordion5">
+		<h4 class="uppercase">Does your institution offer programs that lead to licensure?</h4>
+		<div class="accordion" id="accordion3">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion5" href="#collapseFive"><i class="fa fa-chevron-circle-right"></i> What types of programs require external approval in New Mexico? </p>
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree"><i class="fa fa-chevron-circle-right"></i> Why is this important for state authorization? </p>
 				</div>
-				<div id="collapseFive" class="accordion-body collapse">
+				<div id="collapseThree" class="accordion-body collapse">
 					<div class="accordion-inner">
-						Education; Nursing; Cosmetology; Acupuncture and Oriental Medicine; Massage Therapy; Private Investigations; Allied Health Professions. 
+						In some cases, programs that are offered require programmatic approval in New Mexico by an external body in addition to institutional state authorization approval. If your institution offers any of these kinds of programs, this will trigger regulatory action with the New Mexico Higher Education Department. 
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="accordion" id="accordion6">
+		<div class="accordion" id="accordion4">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion6" href="#collapseSix"><i class="fa fa-chevron-circle-right"></i> More on licensure and the New Mexico Higher Education Department (NMHED). </p>
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour"><i class="fa fa-chevron-circle-right"></i> More on licensure and the New Mexico Higher Education Department (NMHED). </p>
 				</div>
-				<div id="collapseSix" class="accordion-body collapse">
+				<div id="collapseFour" class="accordion-body collapse">
 					<div class="accordion-inner">
-						In addition to the programs listed that require external program approval, there are 29 Boards and Commissions Divisions that provide professional licensure and may have jurisdiction over the respective programs and institutions offering such programs. At times an institution may be under both, the oversight of NMHED and a board. If the institutionis offering programs not falling under the jurisdiction of the particular board or department, responsible for the institution's oversigt, then the oversight responsibility falls to NMHED. 
+						In addition to the programs listed that require external program approval, there are 29 Boards and Commissions Divisions that provide professional licensure and may have jurisdiction over the respective programs and institutions offering such programs. At times an institution may be under both, the oversight of NMHED and a board. If the institution is offering programs not falling under the jurisdiction of the particular board or department, responsible for the institution's oversigt, then the oversight responsibility falls to NMHED. 
 					</div>
 				</div>
 			</div>
 		</div>
-	    <p class="question-prompt"><span class="question-number">5. </span>If your institution offers any of these programs that lead to licensure, select "yes." This will trigger regulatory action with the New Mexico Higher Education Department.</p>
+	    <p class="question-prompt"><span class="question-number">4. </span>If your institution offers any of these programs that lead to licensure, select "yes": Teacher Education; Nursing Cosmetology; Acupuncture and Oriental Medicine; Massage Therapy; Private Investigations; and, Allied Health Professions.</p>
 		<div class="answer-choice">
-			<label for="q5-you"><input type="checkbox" name="question" id="q5-you">Yes</label>
+			<label for="q4-yes"><input type="checkbox" name="question" id="q4-yes" class="apply calculus1">Yes</label>
 		</div>
 		<div class="answer-choice">
-			<label for="q5-group"><input type="checkbox" name="question" id="q5-group">No</label>
+			<label for="q4-no"><input type="checkbox" name="question" id="q4-no">No</label>
 		</div>
 		<div class="answer-choice">
-			<label for="q5-voting"><input type="checkbox" name="question" id="q5-voting">Do not know</label>
+			<label for="q4-dunno"><input type="checkbox" name="question" id="q4-dunno">Do not know</label>
+		</div>
 	</div>
 
-	<div class="item col-lg-8">
-    	<h4 class="uppercase">Does your institution offer any of the following in New Mexico?</h4>
-    </div>
-					
-			<!-- Screen -->	
+<!-- Screen 5; Q5-->	
 
-					 <div class="item col-lg-8">
+					 <div class="item col-lg-8 q5">
 	                	<h4 class="uppercase">Does your institution offer any of the following in New Mexico?</h4>
-	                	<div class="accordion" id="accordion7">
+	                    <p class="question-prompt"><span class="question-number">5. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q5-seminars"><input type="checkbox" name="question" id="q5-seminars" class="apply"> Host short-term, face-to-face seminars or conferences?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-intern"><input type="checkbox" name="question" id="q5-intern" class="apply">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by your institution?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-independent"><input type="checkbox" name="question" id="q5-independent" class="apply">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by the student acting independently?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-no"><input type="checkbox" name="question" id="q5-no" class="calculus2">None of the above</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-dunno"><input type="checkbox" name="question" id="q5-dunno">Do not know </label>
+						</div>
+					</div>
+
+		<!-- Screen 6; Q6-->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">Do you provide educational offerings that require students to physically meet in New Mexico for instructional purposes that can be characterized by ANY of the following: (a) students are required to meet for 40 or more hours?; (b) the educational offering costs $500 or more?; AND/OR (c) the educational offering is required as part of a sequence or series of courses?</h4>
+	                	<div class="accordion" id="accordion5">
 							<div class="accordion-group">
 								<div class="accordion-heading">
-									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven"><i class="fa fa-chevron-circle-right"></i> Currently non-accredited but planning to work towards accreditation?</p>
+								<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion5" href="#collapseFive"><i class="fa fa-chevron-circle-right"></i> I'm confused. What does this mean?</p>
 								</div>
-								<div id="collapseSeven" class="accordion-body collapse">
-									<div class="accordion-inner">
-										Non-accredited institutions may go through the authorization process, but must demonstrate a plan to become accredited within three years.  
-									</div>
+								<div id="collapseFive" class="accordion-body collapse">
+								<div class="accordion-inner">
+								In New Mexico, any educational offering by an out-of-state institutuion will trigger a need for authorization if the educational offering requires that students meet physically AND if the offering costs $500 or more AND/OR meets for 40 or more total hours AND/OR is required as part of a sequence or series of courses.
+								</div>
 								</div>
 							</div>
 						</div>
-	                    <p class="question-prompt"><span class="question-number">6. </span> Select all that apply. </p>
+	                    <p class="question-prompt"><span class="question-number">6. </span> Select one option. </p>
 						<div class="answer-choice">
-							<label for="q6-seminars"><input type="checkbox" name="question" id="q6-seminars"> Host short-term, face-to-face seminars or conferences?</label>
+							<label for="q6-yes"><input type="checkbox" name="question" id="q6-yes" class="apply calculus1"> Yes </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q6-intern"><input type="checkbox" name="question" id="q6-intern">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by your institution?</label>
+							<label for="q6-no"><input type="checkbox" name="question" id="q6-no" class="calculus2"> No</label>
 						</div>
 						<div class="answer-choice">
-							<label for="q6-independent"><input type="checkbox" name="question" id="q6-independent">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by the student acting independently?</label>
-						</div>
-						<div class="answer-choice">
-							<label for="q6-none"><input type="checkbox" name="question" id="q6-none">None of the above</label>
-						</div>
-						<div class="answer-choice">
-							<label for="q6-dunno"><input type="checkbox" name="question" id="q6-dunno">Do not know </label>
+							<label for="q6-dunno"><input type="checkbox" name="question" id="q6-dunno">Do not know</label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 7; Q7-->
 
-					<div class="item col-lg-8">
-	                	<h4 class="uppercase">Does your institution require students outside of your home state to physically meet in a location for instructional purposes in New Mexico for (a) 40 or more hours, (b) at a cost of $500 or more, AND/OR (c) include typical enrollment as completion of a sequence, series, or multiple courses?</h4>
-	                    <p class="question-prompt"><span class="question-number">7. </span> Select one option. </p>
-						<div class="answer-choice">
-							<label for="q7-yes"><input type="checkbox" name="question" id="q7-yes"> Yes </label>
-						</div>
-						<div class="answer-choice">
-							<label for="q7-no"><input type="checkbox" name="question" id="q7-no"> No</label>
-						</div>
-						<div class="answer-choice">
-							<label for="q7-dunno"><input type="checkbox" name="question" id="q7-dunno">Do not know</label>
-						</div>
-					</div>
-
-		<!-- Screen -->	
-
-					<div class="item col-lg-8">
+					<div class="item col-lg-8 q7">
 	                	<h4 class="uppercase">Does your insitution maintain any of the following in New Mexico?</h4>
-	                    <p class="question-prompt"><span class="question-number">8. </span> Select all that apply. </p>
+	                    <p class="question-prompt"><span class="question-number">7. </span> Select all that apply. </p>
 						<div class="answer-choice">
-							<label for="q8-physical"><input type="checkbox" name="question" id="q8-physical"> Maintain a location (physical building) that is used for instructional activity </label>
+							<label for="q7-physical"><input type="checkbox" name="question" id="q7-physical" class="apply"> a location (physical building) that is used for instructional activity </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-non-instructional"><input type="checkbox" name="question" id="q8-non-instructional"> Maintain a location (physical building) that is used only for non-instructional activities (administration,staff, recruitment, etc.) </label>
+							<label for="q7-non-instructional"><input type="checkbox" name="question" id="q7-non-instructional" class="apply"> a location (physical building) that is used only for non-instructional activities (administration,staff, recruitment, etc.) </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-both"><input type="checkbox" name="question" id="q8-both"> Maintain a location (physical building) that is used for BOTH, instructional and non-instructional activity? </label>
+							<label for="q7-both"><input type="checkbox" name="question" id="q7-both" class="apply"> a location (physical building) that is used for BOTH, instructional and non-instructional activity? </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-equipment"><input type="checkbox" name="question" id="q8-equipment"> House computer servers or other equipment? </label>
+							<label for="q7-equipment"><input type="checkbox" name="question" id="q7-equipment" class="apply"> computer servers or other equipment? </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-out"><input type="checkbox" name="question" id="q8-out"> Maintain any out-of-state addresses or phone numbers, regardless of use ? </label>
+							<label for="q7-out"><input type="checkbox" name="question" id="q7-out" class="apply"> any out-of-state addresses or phone numbers, regardless of use ? </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-enrollment"><input type="checkbox" name="question" id="q8-enrollment"> Maintain a physical site, operated by your institution, that provides information to students for the purpose of enrollment (alone or in addition to other  activities)? </label>
+							<label for="q7-enrollment"><input type="checkbox" name="question" id="q7-enrollment" class="apply"> a physical site, operated by your institution, that provides information to students for the purpose of enrollment (alone or in addition to other activities)? </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-support"><input type="checkbox" name="question" id="q8-support"> Maintain a physical site, operated by the institution that provides student support services (alone or in adittion to other activities)? </label>
+							<label for="q7-support"><input type="checkbox" name="question" id="q7-support" class="apply"> a physical site, operated by the institution that provides student support services (alone or in adittion to other activities)? </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-none"><input type="checkbox" name="question" id="q8-none"> None of the above </label>
+							<label for="q7-no"><input type="checkbox" name="question" id="q7-no" class="calculus2"> None of the above </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q8-dunno"><input type="checkbox" name="question" id="q8-dunno"> Do not know </label>
+							<label for="q7-dunno"><input type="checkbox" name="question" id="q7-dunno"> Do not know </label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 8; Q8 -->	
 
 					<div class="item col-lg-8">
 	                	<h4 class="uppercase">Does your institution have a contract/agreement with a New Mexico educational institution or a New Mexico entity (i.e., library, gym, computer center, etc.) to provide services for your insitution's students (i.e., library, gym, computer center, etc.)?</h4>
-	                    <p class="question-prompt"><span class="question-number">9. </span> Select one option. </p>
+	                    <p class="question-prompt"><span class="question-number">8. </span> Select one option. </p>
 						<div class="answer-choice">
-							<label for="q9-yes"><input type="checkbox" name="question" id="q9-yes"> Yes, my institution has one or more of the types of agreements listed above </label>
+							<label for="q8-yes"><input type="checkbox" name="question" id="q8-yes" class="apply calculus1"> Yes, my institution has one or more of the types of agreements listed above </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q9-no"><input type="checkbox" name="question" id="q9-no"> No</label>
+							<label for="q8-no"><input type="checkbox" name="question" id="q8-no" class="calculus2"> No</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q8-dunno"><input type="checkbox" name="question" id="q8-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 9; Q9-->	
+
+					<div class="item col-lg-8 q9">
+	                	<h4 class="uppercase">Does your institution advertise in any of the following outlets?</h4>
+	                    <p class="question-prompt"><span class="question-number">9. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q9-print"><input type="checkbox" name="question" id="q9-print" class="apply"> A local (New Mexico) print outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-radio"><input type="checkbox" name="question" id="q9-radio" class="apply"> A local (New Mexico) radio outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-tv"><input type="checkbox" name="question" id="q9-tv" class="apply"> A local (New Mexico) television outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-no"><input type="checkbox" name="question" id="q9-no" class="calculus2"> None of the above</label>
 						</div>
 						<div class="answer-choice">
 							<label for="q9-dunno"><input type="checkbox" name="question" id="q9-dunno">Do not know</label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 10; Q10-->	
 
-					<div class="item col-lg-8">
-	                	<h4 class="uppercase">Does your institution advertise in any of the following outlets?</h4>
+					<div class="item col-lg-8 q10">
+	                	<h4 class="uppercase">In New Mexico, does your institution employ any of the following?</h4>
 	                    <p class="question-prompt"><span class="question-number">10. </span> Select all that apply. </p>
 						<div class="answer-choice">
-							<label for="q10-print"><input type="checkbox" name="question" id="q10-print"> A local (New Mexico) print outlet </label>
+							<label for="q10-full"><input type="checkbox" name="question" id="q10-full" class="apply"> Full-time (i.e., non-adjunct) faculty to provide instruction via distance education programs to students in New Mexico </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q10-radio"><input type="checkbox" name="question" id="q10-radio"> A local (New Mexico) radio outlet </label>
+							<label for="q10-adjunct"><input type="checkbox" name="question" id="q10-adjunct"> Adjunct faculty in Wyoming to provide instruction via distance education programs to students in New Mexico </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q10-tv"><input type="checkbox" name="question" id="q10-tv"> A local (New Mexico) television outlet </label>
+							<label for="q10-fullwyo"><input type="checkbox" name="question" id="q10-fullwyo" class="apply"> Full-time (i.e., non-adjunct) faculty in Wyoming to provide instruction via distance education programs solely to students outside of New Mexico </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q10-none"><input type="checkbox" name="question" id="q10-none"> None of the above</label>
+							<label for="q10-adjwyo"><input type="checkbox" name="question" id="q10-adjwyo" class="apply"> Adjunct faculty in Wyoming to provide instruction via distance education programs solely to students outside New Mexico </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-no"><input type="checkbox" name="question" id="q10-no" class="calculus2"> None of the above</label>
 						</div>
 						<div class="answer-choice">
 							<label for="q10-dunno"><input type="checkbox" name="question" id="q10-dunno">Do not know</label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 11; Q11 -->	
 
 					<div class="item col-lg-8">
-	                	<h4 class="uppercase">In New Mexico, does your institution employ any of the following?</h4>
-	                    <p class="question-prompt"><span class="question-number">11. </span> Select all that apply. </p>
+	                	<h4 class="uppercase">Does your institution offer any distance education programs (including online or correspondence study programs) that enroll New Mexico residents?</h4>
+	                	<div class="accordion" id="accordion6">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion6" href="#collapseSix"><i class="fa fa-chevron-circle-right"></i> Does the extent to which a distance education program is offerred online matter for authorization in New Mexico?</p>
+								</div>
+								<div id="collapseSix" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Regardless of whether you have a program that is 10% distance education or 100%, you should indicate yes below.  
+									</div>
+								</div>
+							</div>
+						</div>
+	                    <p class="question-prompt"><span class="question-number">11. </span> If your institution offers any format of a distance education offering that enrolls New Mexico students, check "yes". </p>
 						<div class="answer-choice">
-							<label for="q11-full"><input type="checkbox" name="question" id="q11-full"> Full-time (i.e., non-adjunct) faculty to provide instruction via distance education programs to students in New Mexico </label>
+							<label for="q11-yes"><input type="checkbox" name="question" id="q11-yes" class="apply calculus1"> Yes </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q11-adjunct"><input type="checkbox" name="question" id="q11-adjunct"> Adjunct faculty in Wyoming to provide instruction via distance education programs to students in New Mexico </label>
-						</div>
-						<div class="answer-choice">
-							<label for="q11-fullwyo"><input type="checkbox" name="question" id="q11-fullwyo"> Full-time (i.e., non-adjunct) faculty in Wyoming to provide instruction via distance education programs solely to students outside of New Mexico </label>
-						</div>
-						<div class="answer-choice">
-							<label for="q11-adjwyo"><input type="checkbox" name="question" id="q11-adjwyo"> Adjunct faculty in Wyoming to provide instruction via distance education programs solely to students outside New Mexico </label>
-						</div>
-						<div class="answer-choice">
-							<label for="q11-none"><input type="checkbox" name="question" id="q11-none"> None of the above</label>
+							<label for="q11-no"><input type="checkbox" name="question" id="q11-no" class="calculus2"> No</label>
 						</div>
 						<div class="answer-choice">
 							<label for="q11-dunno"><input type="checkbox" name="question" id="q11-dunno">Do not know</label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 12; Q12-->	
 
-					<div class="item col-lg-8">
-	                	<h4 class="uppercase">Does your institution offer any distance education programs (including online or correspondence study programs) that enroll New Mexico residents?</h4>
-	                	<div class="accordion" id="accordion8">
-							<div class="accordion-group">
-								<div class="accordion-heading">
-									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion8" href="#collapseEight"><i class="fa fa-chevron-circle-right"></i> Does the extent to which a distance education program is offerred online matter for authorization in New Mexico?</p>
-								</div>
-								<div id="collapseEight" class="accordion-body collapse">
-									<div class="accordion-inner">
-										Regardless of the percentage in which a program is offered online that enrolls New Mexico students, any institution with a physical presence in New Mexico must register for authorization.  
-									</div>
-								</div>
-							</div>
-						</div>
-	                    <p class="question-prompt"><span class="question-number">12. </span> If your institution offers any format of a distance education offering that enrolls New Mexico students, check "yes". </p>
-						<div class="answer-choice">
-							<label for="q12-yes"><input type="checkbox" name="question" id="q12-yes"> Yes </label>
-						</div>
-						<div class="answer-choice">
-							<label for="q12-no"><input type="checkbox" name="question" id="q12-no"> No</label>
-						</div>
-						<div class="answer-choice">
-							<label for="q12-dunno"><input type="checkbox" name="question" id="q12-dunno">Do not know</label>
-						</div>
-					</div>
-
-		<!-- Screen -->	
-
-					<div class="item col-lg-8">
+					<div class="item col-lg-8" id="q12">
 	                	<h4 class="uppercase"> Does your program or institution meet at least one of the 8 conditions for exemption?</h4>
-	                    <div class="accordion" id="accordion9">
+	                    <div class="accordion" id="accordion7">
 							<div class="accordion-group">
 								<div class="accordion-heading">
-									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion9" href="#collapseNine"><i class="fa fa-chevron-circle-right"></i> Do you have proof of eligibility for exemption?</p>
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven"><i class="fa fa-chevron-circle-right"></i> Do you have proof of eligibility for exemption?</p>
 								</div>
-								<div id="collapseNine" class="accordion-body collapse">
+								<div id="collapseSeven" class="accordion-body collapse">
 									<div class="accordion-inner">
 										If your program or institution qualifies for exemption with the New Mexico Department of Higher Education, you will need to provide proof that you meet one of the 8 conditions. 
 									</div>
 								</div>
 							</div>
 						</div>
-	                    <p class="question-prompt"><span class="question-number">13. </span> Select all that apply. </p>
+	                    <p class="question-prompt"><span class="question-number">12. </span> Select all that apply. </p>
 						<div class="answer-choice">
-							<label for="q13-second"><input type="checkbox" name="question" id="q13-second"> Your Institution is a post-secondary educational institution that is established by name as an educational institution by the state through a charter, constitutional provision or other action and is supported in whole or in part by state or local taxation;  </label>
+							<label for="q12-second"><input type="checkbox" name="question" id="q12-second"> Your Institution is a post-secondary educational institution that is established by name as an educational institution by the state through a charter, constitutional provision or other action and is supported in whole or in part by state or local taxation;  </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-indian"><input type="checkbox" name="question" id="q13-indian">  Your Institution is funded in full or in part by an Indian tribe or pueblo in the state of New Mexico; </label>
+							<label for="q12-indian"><input type="checkbox" name="question" id="q12-indian">  Your Institution is funded in full or in part by an Indian tribe or pueblo in the state of New Mexico; </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-trade"><input type="checkbox" name="question" id="q13-trade">  Institution is an occupational, trade, or professional school operating pursuant to any New Mexico Occupational licensing law under the jurisdiction of the New Mexico Regulation and Licensing Department; </label>
+							<label for="q12-trade"><input type="checkbox" name="question" id="q12-trade">  Institution is an occupational, trade, or professional school operating pursuant to any New Mexico Occupational licensing law under the jurisdiction of the New Mexico Regulation and Licensing Department; </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-training"><input type="checkbox" name="question" id="q13-training"> Your Insitution consists of courses of instruction provided by an employer for its employees for training purposes; </label>
+							<label for="q12-training"><input type="checkbox" name="question" id="q12-training"> Your Insitution consists of courses of instruction provided by an employer for its employees for training purposes; </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-frat"><input type="checkbox" name="question" id="q13-frat"> You have a course of instruction or study sponsored by a recognized fraternal, trade, business, or professional organization or labor union for the instruction of its members; </label>
+							<label for="q12-frat"><input type="checkbox" name="question" id="q12-frat"> You have a course of instruction or study sponsored by a recognized fraternal, trade, business, or professional organization or labor union for the instruction of its members; </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-org"><input type="checkbox" name="question" id="q13-org"> Organization provides only brief courses of instruction designed to teach specific skills that may be applicable in a work setting but are not sufficient in themselves to be considered programs of training in employment. Normally, such instruction shall meet at least three criteria: (a) No more than 40 hours of direct instruction, (b) Tuition/fee for each course does not exceed $500, and (c) The student normally enrolls for only one course rather than a sequence of courses; </label>
+							<label for="q12-org"><input type="checkbox" name="question" id="q12-org"> Organization provides only brief courses of instruction designed to teach specific skills that may be applicable in a work setting but are not sufficient in themselves to be considered programs of training in employment. Normally, such instruction shall meet at least three criteria: (a) No more than 40 hours of direct instruction, (b) Tuition/fee for each course does not exceed $500, and (c) The student normally enrolls for only one course rather than a sequence of courses; </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-exclu"><input type="checkbox" name="question" id="q13-exclu"> Your Institution exclusively offers education that is solely avocational or recreational in nature; and/or, </label>
+							<label for="q12-exclu"><input type="checkbox" name="question" id="q12-exclu"> Your Institution exclusively offers education that is solely avocational or recreational in nature; and/or, </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q13-chart"><input type="checkbox" name="question" id="q13-chart"> Institution is a chartered, nonprofit religious institutions whose sole purpose is to train students in religious disciplines to prepare them to assume a vocational objective relating primarily to religion (501(c)3 IRS status letter required). </label>
+							<label for="q12-chart"><input type="checkbox" name="question" id="q12-chart"> Institution is a chartered, nonprofit religious institutions whose sole purpose is to train students in religious disciplines to prepare them to assume a vocational objective relating primarily to religion (501(c)3 IRS status letter required). </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-no"><input type="checkbox" name="question" id="q12-no"> None of the above.</label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 13; Q13-->	
 
 					<div class="item col-lg-8">
 	                	<h4 class="uppercase">Is your institution part of a multi-insitutition system (example: State University of New York - SUNY)?</h4>
-	                    <p class="question-prompt"><span class="question-number">14. </span> Select one option. </p>
+	                    <p class="question-prompt"><span class="question-number">13. </span> Select one option. </p>
 						<div class="answer-choice">
-							<label for="q14-yes"><input type="checkbox" name="question" id="q14-yes"> Yes </label>
+							<label for="q13-yes"><input type="checkbox" name="question" id="q13-yes"> Yes </label>
 						</div>
 						<div class="answer-choice">
-							<label for="q14-no"><input type="checkbox" name="question" id="q14-no"> No </label>
+							<label for="q13-no"><input type="checkbox" name="question" id="q13-no"> No </label>
 						</div>
 					</div>
 
-		<!-- Screen -->	
+		<!-- Screen 14; Q14-->	
 
 					<div class="item col-lg-8">
 	                	<h4 class="uppercase">What is your institution's anticipated or actual gross annual tuition and fee revenue in New Mexico?</h4>
-	                	<div class="accordion" id="accordion10">
+	                	<div class="accordion" id="accordion8">
 							<div class="accordion-group">
 								<div class="accordion-heading">
-									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion10" href="#collapseTen"><i class="fa fa-chevron-circle-right"></i> How to calculate?</p>
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion8" href="#collapseEight"><i class="fa fa-chevron-circle-right"></i> How to calculate?</p>
 								</div>
-								<div id="collapseTen" class="accordion-body collapse">
+								<div id="collapseEight" class="accordion-body collapse">
 									<div class="accordion-inner">
 										If your institution has generated tutition and fee revenue in New Mexico in the last completed academic year, provide this total. Otherwise, estimate as best as you can the anticipated gross annual tuition and fee revenue for New Mexico related activity for your institution.
 									</div>
@@ -503,18 +490,15 @@
 						</div>
 	                    <p class="question-prompt"><span class="question-number">14. </span> Please give us a specific number: </p>
 						<div class="answer-choice">
-							<label for="q14-yes"><input type="checkbox" name="question" id="q14-yes"> XXXX (client should enter dollar amount). Field should be constrained to max $XXX, XXX,XXX.00 and minimum $0.00 </label>
+							<label for="q14-yes"><input type="checkbox" name="question" id="q14-yes">$<input type="number" name="revenue" id="revenue" max="9999999" min="0" /></label> <!--XXXX (client should enter dollar amount). Field should be constrained to max $XXX, XXX,XXX.00 and minimum $0.00-->
 						</div>
-					</div>
-
-
-
-
-
+					<div class="col-lg-8 text-center">
+						<br><br>
 							<button class="button button-big button-border-light button-generate-report">Generate Report</button>
 						</div>
 					</div>
             	</div>
+
             	<div class="custom-navigation-buttons">
 				  <a class="btn prev prev-verify">Previous</a>
 				  <a class="btn next next-verify">Next</a><br>
@@ -529,7 +513,7 @@
         	<div class="container">
             	<div class="row">
                 	<div class="col-lg-8 col-lg-offset-2 text-center">
-                    	<h2 class="uppercase">What action should my institution take in New Mexico?/h2>
+                    	<h2 class="uppercase">What action should my institution take in New Mexico?</h2>
                         <p class="subhead">Important Considerations Based on Your Circumstances</p>
                     </div>
 
@@ -538,154 +522,91 @@
                     	<h2 class="uppercase">Your report from the NYU State Authorization Advisor</h2>
                     </div>
 
-<div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
+
+
+
+<!-- Don't know how to connect the logic of if "etc" true show "this" but it should be pretty easy for you since everything is pointed out and you just have to copy/paste the unique identifier that I mention. KEWL. Show text unless conditioned-->	
+
+
+<div id="report-apply" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
 <div class="service">
 <i class="fa fa-list fa-3x"></i>
 <h2>Apply for Authorization</h2>
-<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply:</h3>
+
+<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply.</h3>
+
+<!-- Client Description-->	
+
+<li>Because you are a <span id="q1-text"></span> institution, your institution is regulated by the New Mexico Higher Education Department.</li>
+
+<li>Because your Institution is:</li>
 <ul>
-	<li>Apply to The New Mexico Higher Education Department for program and/or institutional authorization;</li>
-	<li>You have indicated that your organization is a <strong> multi-institution system </strong>. In New Mexico, each institution within your organization must apply for authorization individually;</li>
+	<li id="q4-true" style="display:none">Offering programs that lead to New Mexico licensure;</li>
+	<li id="q5-true" style="display:none">Having seminars, conferences and/or internships;</li>
+	<li id="q6-true" style="display:none">Meeting for more than 40 hrs, $500, and one course in sequence;</li>
+	<li id="q7-true" style="display:none">Maintaining a location, site, server, phone and/or address;</li>
+	<li id="q8-true" style="display:none">Contracts to provide students with services;</li>
+	<li id="q9-true" style="display:none">State advertising;</li>
+	<li id="q10-true" style="display:none">Employing any faculty; and,</li>
+	<li id="q11-true" style="display:none">Offering distance ed to NM students and employing recruiting agents in New Mexico</li>
+</ul>
+
+<!-- General Application Process -->	
+
+<li>In New Mexico, you should apply for program and/or institutional authorization with the New Mexico Higher Education Department.</li>
+
+<li>Application Process</li>
+<ul>
+	<li>There are two types of authorization in New Mexico: Licensure and Registration. Each type of authorization has different requirements for the process to apply and fees. </li>
+	<li id="q14-true" style="display:none">Because you are a <strong> multi-institution system </strong>, each institution within your organization in New Mexico must apply for authorization individually;</li>
 	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
 	<li>The initial authorization application process generally takes 6 to 9 months.</li>
 </ul>
-<h3>Authorization Fee Estimate:</h3>
+
+
+<!-- License Process -->	
+
+<li>Because your institution is operating with a Presence in New Mexico, your institution needs to apply for a License. </li>
+
+<!-- Can you make the word "License" a pop-up? content for the pop-up: The New Mexico Higher Education Department calls authorization to operate for institutions like yours “Licensure” -->
+
+<li>Licensing Institutions Process</li>
 <ul>
-	<li>Based on the information you supplied, the total cost estimate for your institution to comply with New Mexico Higher Education Department state authorization regulations is $XXX USD</li>
-<h3>Licensing Institutions</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating with a "Presence" in New Mexico, your institution needs to apply for a License.</li>
 	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Renewal fees</strong>:</li>
-	<ul>
-	     <li>Due annually by July 1</li>
-	     <li>Less than $50,000 annual gross tuition revenue: $500</li>
-	     <li>$50,000-$249,999 annual gross tuition revenue: $1,000</li>
-	     <li>$250,000-$499,999 annual gross tuition revenue: $2,000</li>
-	     <li>$500,000-$999,999 annual gross tuition revenue: $3,000</li>
-		 <li>Greater than $1M annual gross tuition revenue: $5,000</li>
-    </ul>
- </ul>
-<h3>Registering Institution</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating from a location other than New Mexico and actively recruiting students in NM, your institution needs to apply to Register in New Mexico.</li>
-	<li>Application forms can be obtained under Registration) at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Registration Renewal Fee</strong> is due annyally by July 1, Fee is $1,000</li>
-	<li><strong>Register Agents</strong></li>
-	<ul>
-	     <li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization.</li>
-	     <li>Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
-	     <li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
-    </ul>
- </ul>
-<h3>Change Fees</h3>
-<p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
-<ul>
-	<li>New Degree Program $1,500</li>
-	<li>New Certificate Program $750</li>
-	<li>Change of Ownership Degree-Granting School $1,000</li>
-	<li>Change of Ownership Career School $200</li>
-	<li>Change of School Name $100</li>
-	<li>Change of School Location $100</li>
+	<li>Because your annual gross tuition revenue is $<span id="revenue_text"></span>, your renewal fee will be <span id="fee"></span>, which will be due annually by July 1.</li>
+
+	<!-- Here the range from which you have to create the IF/THEN logic 
+	[Less than $50,000 annual gross tuition revenue: $500
+	$50,000-$249,999 annual gross tuition revenue: $1,000
+	$250,000-$499,999 annual gross tuition revenue: $2,000
+	$500,000-$999,999 annual gross tuition revenue: $3,000
+	Greater than $1M annual gross tuition revenue: $5,000)] -->
+
 </ul>
-<h3>Regulatory Agency Contact:</h3>
-<p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</p>
-<p> http://www.hed.state.nm.us Phone 505-476-8418</p>
+<div id ="register-institution">
+<h3>Registering Institution</h3><!-- [If “Yes” to Screen 5 and 14 + no “No” selected on any Screen 7 - 13]-->
+<ul>
+	<li>Because your institution is only triggering activity in New Mexico because it is offering distance education from a state other than New Mexico and are actively recruiting students in NM, your institution needs to apply to Register in New Mexico. <li>
+<!--[POPUP FROM THE WORD REGISTER ABOVE] The New Mexico Higher Education Department calls authorization to operate for institutions like yours “Registration”-->
+<li>Application forms can be obtained under Registration at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
+<li>Your Registration Renewal Fee will be $1,000, due annually by July 1st.</li>
+</ul>
 </div>
-</div><div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
-<div class="service">
-<i class="fa fa-list fa-3x"></i>
-<h2>Apply for Authorization</h2>
-<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply:</h3>
+<div class="agents" style="display:none">
+<h3>Because you have Recruiting Agents in New Mexico</h3>, apply to register them for agent authorization:
 <ul>
-	<li>Apply to The New Mexico Higher Education Department for program and/or institutional authorization;</li>
-	<li>You have indicated that your organization is a <strong> multi-institution system </strong>. In New Mexico, each institution within your organization must apply for authorization individually;</li>
-	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
-	<li>The initial authorization application process generally takes 6 to 9 months.</li>
+<li>Please access the recruiting agent authorization form at the following website by clicking on "Agent Authorization":
+ 	http://www.hed.state.nm.us/institutions/applications.aspx </li>
+<li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
 </ul>
-<h3>Authorization Fee Estimate:</h3>
-<ul>
-	<li>Based on the information you supplied, the total cost estimate for your institution to comply with New Mexico Higher Education Department state authorization regulations is $XXX USD</li>
-<h3>Licensing Institutions</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating with a "Presence" in New Mexico, your institution needs to apply for a License.</li>
-	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Renewal fees</strong>:</li>
-	<ul>
-	     <li>Due annually by July 1</li>
-	     <li>Less than $50,000 annual gross tuition revenue: $500</li>
-	     <li>$50,000-$249,999 annual gross tuition revenue: $1,000</li>
-	     <li>$250,000-$499,999 annual gross tuition revenue: $2,000</li>
-	     <li>$500,000-$999,999 annual gross tuition revenue: $3,000</li>
-		 <li>Greater than $1M annual gross tuition revenue: $5,000</li>
-    </ul>
- </ul>
-<h3>Registering Institution</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating from a location other than New Mexico and actively recruiting students in NM, your institution needs to apply to Register in New Mexico.</li>
-	<li>Application forms can be obtained under Registration) at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Registration Renewal Fee</strong> is due annyally by July 1, Fee is $1,000</li>
-	<li><strong>Register Agents</strong></li>
-	<ul>
-	     <li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization.</li>
-	     <li>Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
-	     <li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
-    </ul>
- </ul>
-<h3>Change Fees</h3>
-<p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
-<ul>
-	<li>New Degree Program $1,500</li>
-	<li>New Certificate Program $750</li>
-	<li>Change of Ownership Degree-Granting School $1,000</li>
-	<li>Change of Ownership Career School $200</li>
-	<li>Change of School Name $100</li>
-	<li>Change of School Location $100</li>
-</ul>
-<h3>Regulatory Agency Contact:</h3>
-<p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</p>
-<p> http://www.hed.state.nm.us Phone 505-476-8418</p>
 </div>
-</div><div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
-<div class="service">
-<i class="fa fa-list fa-3x"></i>
-<h2>Apply for Authorization</h2>
-<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply:</h3>
+
+<h3>Authorization Fee Estimate</h3>
 <ul>
-	<li>Apply to The New Mexico Higher Education Department for program and/or institutional authorization;</li>
-	<li>You have indicated that your organization is a <strong> multi-institution system </strong>. In New Mexico, each institution within your organization must apply for authorization individually;</li>
-	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
-	<li>The initial authorization application process generally takes 6 to 9 months.</li>
-</ul>
-<h3>Authorization Fee Estimate:</h3>
-<ul>
-	<li>Based on the information you supplied, the total cost estimate for your institution to comply with New Mexico Higher Education Department state authorization regulations is $XXX USD</li>
-<h3>Licensing Institutions</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating with a "Presence" in New Mexico, your institution needs to apply for a License.</li>
-	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Renewal fees</strong>:</li>
-	<ul>
-	     <li>Due annually by July 1</li>
-	     <li>Less than $50,000 annual gross tuition revenue: $500</li>
-	     <li>$50,000-$249,999 annual gross tuition revenue: $1,000</li>
-	     <li>$250,000-$499,999 annual gross tuition revenue: $2,000</li>
-	     <li>$500,000-$999,999 annual gross tuition revenue: $3,000</li>
-		 <li>Greater than $1M annual gross tuition revenue: $5,000</li>
-    </ul>
- </ul>
-<h3>Registering Institution</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating from a location other than New Mexico and actively recruiting students in NM, your institution needs to apply to Register in New Mexico.</li>
-	<li>Application forms can be obtained under Registration) at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Registration Renewal Fee</strong> is due annyally by July 1, Fee is $1,000</li>
-	<li><strong>Register Agents</strong></li>
-	<ul>
-	     <li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization.</li>
-	     <li>Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
-	     <li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
-    </ul>
- </ul>
+	<li>The total cost estimate for your institution to Apply for Authorization with New Mexico Higher Education Department state authorization regulations is <strong>$<span id="calculus"></span></strong></li>
+	 <li class="agents" style="display:none">This estimate includes an agent fee of $200 per agent, which totals <strong>$<span id="agent-fee"></span></strong></li>
+	</ul>
+
 <h3>Change Fees</h3>
 <p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
 <ul>
@@ -696,129 +617,107 @@
 	<li>Change of School Name $100</li>
 	<li>Change of School Location $100</li>
 </ul>
+
 <h3>Regulatory Agency Contact:</h3>
 <p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</p>
-<p> http://www.hed.state.nm.us Phone 505-476-8418</p>
+<p> Regulator</p>
+<p> Diane Vigil-Hayes </p>
+<p> Diane.Vigil@state.nm.us </p>
+<p> 505-476-8418 </p>
+<p> Provate and Proprietary Schools Administrator and Compliance Officer</p>
 </div>
-</div><div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
+</div><div id="report-exemption" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
 <div class="service">
 <i class="fa fa-list fa-3x"></i>
-<h2>Apply for Authorization</h2>
-<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply:</h3>
+<h2>Apply for Exemption</h2>
+
+<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on the information you entered, you should apply for exemption in New Mexico. See below for information and instructions about how to apply:</h3>
 <ul>
-	<li>Apply to The New Mexico Higher Education Department for program and/or institutional authorization;</li>
-	<li>You have indicated that your organization is a <strong> multi-institution system </strong>. In New Mexico, each institution within your organization must apply for authorization individually;</li>
-	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
-	<li>The initial authorization application process generally takes 6 to 9 months.</li>
+	<li>Apply for exemption using the form and information provided at the following website http://www.hed.state.nm.us/institutions/exemption.aspx;</li>
+	<li>Once exemption is secured, your institution is still required to report basic enrollment data annually including (but not limited to) program changes, enrollments, course catalogs, and financial summaries;</li>
+	<li>The exemption process takes approximately 6 months.</li>
+	<li id="q16-true" style="display:none">Because you are a multi-institution system, each institution within your organization in New Mexico must either apply for authorization individually or apply for authorization in one document that lists each institution separately by name, and includes evidence that proves that each institution should be qualified for exemption.</li>
 </ul>
-<h3>Authorization Fee Estimate:</h3>
+
+<h3>To secure exemption, you should be prepared to provide documentation to prove that your institution meets at least one of the following 8 conditions:</h3>
 <ul>
-	<li>Based on the information you supplied, the total cost estimate for your institution to comply with New Mexico Higher Education Department state authorization regulations is $XXX USD</li>
-<h3>Licensing Institutions</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating with a "Presence" in New Mexico, your institution needs to apply for a License.</li>
-	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Renewal fees</strong>:</li>
+	<li>Your institution is a post-secondary educational institution that is established by name as an educational institution by the state through a charter, constitutional provision or other action and is supported in whole or in part by state or local taxation;</li>
+	<li>Your institution is an occupational, trade, or professional school operating pursuant to any New Mexico Occupational licensing law under the jurisdiction of the New Mexico Regulation and Licensing Department;</li>
+	<li>Your program consists of courses of instruction provided by an employer for its employees for training purposes;</li>
+	<li>Your institution exclusively offers education that is solely avocational or recreational in nature;</li>
+	<li>Your program consists of courses of instruction or study sponsored by a recognized fraternal, trade, business, or professional organization or labor union for the instruction of its members;</li>
+	<li>Your institution is a chartered, nonprofit religious institutions whose sole purpose is to train students in religious disciplines to prepare them to assume a vocational objective relating primarily to religion (501(c)3 IRS status letter required);</li>
+	<li>Your institution is funded in full or in part by an Indian tribe or pueblo in the state of New Mexico; or,</li>
+	<li>Your institution offers only brief courses of instruction designed to teach specific skills that may be applicable in a work setting but are not sufficient in themselves to be considered programs of training in employment. Normally, such instruction shall meet at least three criteria: </li>
 	<ul>
-	     <li>Due annually by July 1</li>
-	     <li>Less than $50,000 annual gross tuition revenue: $500</li>
-	     <li>$50,000-$249,999 annual gross tuition revenue: $1,000</li>
-	     <li>$250,000-$499,999 annual gross tuition revenue: $2,000</li>
-	     <li>$500,000-$999,999 annual gross tuition revenue: $3,000</li>
-		 <li>Greater than $1M annual gross tuition revenue: $5,000</li>
+		<li>No more than 40 hours of direct instruction;</li>
+		<li>Tuition/fee for each course does not exceed $500; and,</li>
+		<li>The student normally enrolls for only one course rather than a sequence of courses.</li>
     </ul>
- </ul>
-<h3>Registering Institution</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating from a location other than New Mexico and actively recruiting students in NM, your institution needs to apply to Register in New Mexico.</li>
-	<li>Application forms can be obtained under Registration) at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Registration Renewal Fee</strong> is due annyally by July 1, Fee is $1,000</li>
-	<li><strong>Register Agents</strong></li>
-	<ul>
-	     <li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization.</li>
-	     <li>Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
-	     <li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
-    </ul>
- </ul>
-<h3>Change Fees</h3>
-<p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
-<ul>
-	<li>New Degree Program $1,500</li>
-	<li>New Certificate Program $750</li>
-	<li>Change of Ownership Degree-Granting School $1,000</li>
-	<li>Change of Ownership Career School $200</li>
-	<li>Change of School Name $100</li>
-	<li>Change of School Location $100</li>
 </ul>
+
 <h3>Regulatory Agency Contact:</h3>
-<p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</p>
-<p> http://www.hed.state.nm.us Phone 505-476-8418</p>
+<p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505 </p>
+<p> http://www.hed.state.nm.us Phone 505-476-8418 </p>
+
+<h3>Exemption Fee Estimate: </h3>
+<p> For institutions that qualify for exemption, a one-time exemption fee of $500 will be charged.</p>
+
 </div>
-</div><div class="col-lg-8 col-lg-offset-2 text-left q1-tasks">
+</div><div id="report-no-action" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
 <div class="service">
 <i class="fa fa-list fa-3x"></i>
-<h2>Apply for Authorization</h2>
-<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on your responses, your organization should apply for authorization in New Mexico. Please see below for information and instructions about how to apply:</h3>
+<h2>No Action Necessary</h2>
+
+<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on the information you supplied, your institution's characteristics allow current operation to continue without action. You may wish to produce and send a letter to the New Mexico Higher Education Department as a courtesy, notifying the NMHED of your organization's awareness of and compliance with their regulations.</h3>
 <ul>
-	<li>Apply to The New Mexico Higher Education Department for program and/or institutional authorization;</li>
-	<li>You have indicated that your organization is a <strong> multi-institution system </strong>. In New Mexico, each institution within your organization must apply for authorization individually;</li>
-	<li>Applications for authorization to New Mexico Higher Education Department must include either proof of current accreditation status (by a body recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department) OR include a plan to become accredited within three years;</li>
-	<li>The initial authorization application process generally takes 6 to 9 months.</li>
-</ul>
-<h3>Authorization Fee Estimate:</h3>
-<ul>
-	<li>Based on the information you supplied, the total cost estimate for your institution to comply with New Mexico Higher Education Department state authorization regulations is $XXX USD</li>
-<h3>Licensing Institutions</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating with a "Presence" in New Mexico, your institution needs to apply for a License.</li>
-	<li>Application forms can be obtained under License at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Renewal fees</strong>:</li>
+	<li>Regulatory Agency Contact: </li>
 	<ul>
-	     <li>Due annually by July 1</li>
-	     <li>Less than $50,000 annual gross tuition revenue: $500</li>
-	     <li>$50,000-$249,999 annual gross tuition revenue: $1,000</li>
-	     <li>$250,000-$499,999 annual gross tuition revenue: $2,000</li>
-	     <li>$500,000-$999,999 annual gross tuition revenue: $3,000</li>
-		 <li>Greater than $1M annual gross tuition revenue: $5,000</li>
+		<li>New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</li>
+		<li>87505 http://www.hed.state.nm.us Phone 505-476-8418</li>
     </ul>
- </ul>
-<h3>Registering Institution</h3>
-<ul>
-	<li>Based on the information you provided, that your institution is operating from a location other than New Mexico and actively recruiting students in NM, your institution needs to apply to Register in New Mexico.</li>
-	<li>Application forms can be obtained under Registration) at: http://www.hed.state.nm.us/institutions/applications.aspx</li>
-	<li><strong>Registration Renewal Fee</strong> is due annyally by July 1, Fee is $1,000</li>
-	<li><strong>Register Agents</strong></li>
+	<li>Register Agents</li>
 	<ul>
-	     <li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization.</li>
-	     <li>Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
-	     <li>Please note for future years that a $200 Agent Fee will be due to the NMHED per agent, per year</li>
-    </ul>
- </ul>
-<h3>Change Fees</h3>
-<p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
-<ul>
-	<li>New Degree Program $1,500</li>
-	<li>New Certificate Program $750</li>
-	<li>Change of Ownership Degree-Granting School $1,000</li>
-	<li>Change of Ownership Career School $200</li>
-	<li>Change of School Name $100</li>
-	<li>Change of School Location $100</li>
+		<li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization. Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
+	</ul>
 </ul>
-<h3>Regulatory Agency Contact:</h3>
-<p> New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</p>
-<p> http://www.hed.state.nm.us Phone 505-476-8418</p>
+</div>
+</div><div class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
+<div class="service">
+<i class="fa fa-list fa-3x"></i>
+<h2>Unclear - Authorization may be required but cannot be determined with current data. Please supply missing data and try again.</h2>
+
+<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on the information you supplied, we were unable to determine whether authorization is required for your organization. Please collect and supply missing data for your customized report.</h3>
+<ul>
+	<li>Regulatory Agency Contact: </li>
+	<ul>
+		<li>New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</li>
+		<li>87505 http://www.hed.state.nm.us Phone 505-476-8418</li>
+    </ul>
+	<li>Register Agents</li>
+	<ul>
+		<li>Apply to register employees or agents who provide organized, consistent, on-the-ground recruiting of students in this state for agent authorization. Please access the appropriate form at the following website by clicking on "Agent Authorization": http://www.hed.state.nm.us/institutions/applications.aspx </li>
+	</ul>
+</ul>
+</div>
+</div><div id="report-unregulated" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
+<div class="service">
+<i class="fa fa-list fa-3x"></i>
+<h2>Unregulated Institution</h2>
+
+<h3>Thank you for using NYU's Academic Accreditation Compliance Instrument. Based on the information you supplied, your institution or program is not able to become authorized by this agency to conduct the activity that they regulate.</h3>
+<ul>
+	<li>Regulatory Agency Contact: </li>
+	<ul>
+		<li>New Mexico Higher Education Department 2048 Galisteo Street Santa Fe, NM 87505</li>
+		<li>87505 http://www.hed.state.nm.us Phone 505-476-8418</li>
+	</ul>
+</ul>
 </div>
 </div>
                 </div>
             </div>
         </section>
-
-        
-
-
-
-
-
         
         <!-- FOOTER -->
         <footer>
