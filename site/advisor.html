@@ -607,6 +607,22 @@
 	 <li class="agents" style="display:none">This estimate includes an agent fee of $200 per agent, which totals <strong>$<span id="agent-fee"></span></strong></li>
 	</ul>
 
+	<h4>Fee Calulator</h4>
+<div id="caclulator1" style="border-radius: 25px; border: 2px solid #8AC007;padding: 20px; ">
+<h5>Registering Institutions Fee</h5>
+$1000 (initial registration fee) + $200 x  (Number of agents)<input type="number" name="agentsV" id="agentsV" value="Number of Agents"><br> <button id="getvalueC1">Get Fee</button>&nbsp;&nbsp;&nbsp;&nbsp; <strong>Your Fee:<span id="formula1"></span></strong>
+</div>
+<br>
+<div id="caclulator2" style="border-radius: 25px; border: 2px solid #8AC007;padding: 20px;">
+<h5>Licensing Institutions Fee</h5>
+<ul>
+<li><label><input type="checkbox" name="checkboxC2" id="degree" value="4000">Degree-granting, license fee $4000 </label></li>
+<li><label><input type="checkbox" name="checkboxC2" id="nondegree" value="1000">Non Degree-granting, license fee $1000 </label></li>
+<li><label>Satellite Site Visit, All Licensing Institutions, $250</label></li>
+<li><label>Gross annual tuition and fee revenue:</label><input type="number" name="revenueC2" id="revenueC2"></li>
+<button id="getvalueC2">Get Fee</button> &nbsp;&nbsp;&nbsp;&nbsp; <strong>Your fee:<span id="formula2"></span></strong>
+</div>
+
 <h3>Change Fees</h3>
 <p> Please note that after initial authorization, the NMHED also charges Change Fees on an ongoing basis </p>
 <ul>
@@ -682,7 +698,7 @@
 	</ul>
 </ul>
 </div>
-</div><div class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
+</div><div id="report-unclear" class="col-lg-8 col-lg-offset-2 text-left" style="display:none">
 <div class="service">
 <i class="fa fa-list fa-3x"></i>
 <h2>Unclear - Authorization may be required but cannot be determined with current data. Please supply missing data and try again.</h2>
