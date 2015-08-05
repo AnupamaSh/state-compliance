@@ -22,41 +22,15 @@ def Main():
 	env = Environment(loader=FileSystemLoader(TEMPLATES_DIR),
 		extensions=['jinja2.ext.with_'], trim_blocks=True, lstrip_blocks=True)
 	#------------Main pages
-	pages = ["index", 'advisor', 'about', 'form']
+	pages = ["index", 'advisor', 'about']
 	for page in pages:
 		template = env.get_template('%s.html' % page)
 		html = template.render(template_data)
 		with open('site/%s.html' % page, 'w') as f:
 			f.write(html.encode('utf8'))
 			f.close()
-	#------------Case Studies
-	projects = {}
-	for case in CASE_STUDIES:
-		projects[case['title'].replace(" ","-").lower()] = case
-	#Delete all case study files
-	old_case_studies = glob.glob('site/ajax/*')
-	for f in old_case_studies:
-		if f != 'site/ajax/loadMore.html':
-			os.remove(f)
-	#Recreate new ones
-	error_dimensions = dimensions_validated()
-	if not len(error_dimensions):
-		for key, value in projects.items():
-			template = env.get_template('project.html')
-			html = template.render(value)
-			with open('site/ajax/{}.html'.format(key), 'w') as f:
-				f.write(html.encode('utf8'))
-				f.close()
-	else:
-		print "Error, dimensions are not properly labeled: "
-		for dim in error_dimensions:
-			print dim
-	#------------ loadMore.html
-	template = env.get_template('loadMore.html')
-	html = template.render(template_data)
-	with open('site/ajax/{}.html'.format('loadMore'), 'w') as f:
-		f.write(html.encode('utf8'))
-		f.close()
+
+
 	#make the js
 	items = { "items":sort_items() } 
 	template = env.get_template('main.js')
