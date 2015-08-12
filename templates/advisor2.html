@@ -1,0 +1,440 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+    <!-- SECTION WELCOME -->
+    <section id="advisor-title">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-lg-12 text-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- SECTION TESTIMONIAL -->
+        <div class="row">
+            	<div class="col-lg-12 text-center">
+            		<h1 class="wow fadeInDown">The NYU State Authorization Advisor</span></h1>
+                </div>
+        </div>
+		<section id="questionnaire" data-stellar-background-ratio="0.9">
+        	<div class="container">
+
+                <div class="custom-navigation-numbers">
+            		<div class="custom-page active 1"><span class="custom-number">1</span></div>
+            		<div class="custom-page 2"><span class="custom-number">2</span></div>
+            		<div class="custom-page 3"><span class="custom-number">3</span></div>
+            		<div class="custom-page 4"><span class="custom-number">4</span></div>
+            		<div class="custom-page 5"><span class="custom-number">5</span></div>
+            		<div class="custom-page 6"><span class="custom-number">6</span></div>
+            		<div class="custom-page 7"><span class="custom-number">7</span></div>
+            		<div class="custom-page 8"><span class="custom-number">8</span></div>
+            		<div class="custom-page 9"><span class="custom-number">9</span></div>
+            		<div class="custom-page 10"><span class="custom-number">10</span></div>
+            		<div class="custom-page 11"><span class="custom-number">11</span></div>
+            		<div class="custom-page 12"><span class="custom-number">12</span></div>
+            		<div class="custom-page 13"><span class="custom-number">13</span></div>
+            		<div class="custom-page 14"><span class="custom-number">14</span></div>
+            	</div>
+                
+    <div id="questionnaire-carousel" class="owl-carousel owl-theme">
+ 
+    <!-- Screen 1 -->
+
+    <div class="item col-lg-8" id ="q1">
+    		<h4 class="uppercase">Your state authorization advisor will help you determine if your program or institution should seek authorization with the New Mexico Higher Education Department, or take some other action. </h4>
+
+		<h4 class="uppercase">Is your institution...</h4>
+        <p class="question-prompt"><span class="question-number">1. </span>Please select all that apply:</p>
+        <div class="answer-choice">
+        	<label for="q1-private"><input type="checkbox" name="question" id="q1-private" value="Private">Private </label>
+        </div>
+        <div class="answer-choice">
+        	<label for="q1-public"><input type="checkbox" name="question" id="q1-public" value="Public">Public </label>
+        </div>
+        <div class="answer-choice">
+        	<label for="q1-np"><input type="checkbox" name="question" id="q1-np" value="Non-Profit">Non-profit </label>
+        </div>
+        <div class="answer-choice">
+        	<label for="q1-fp"><input type="checkbox" name="question" id="q1-fp" value="For-profit">For-profit </label>
+        </div>
+		<div class="answer-choice">
+			<label for="q1-degree"><input type="checkbox" name="question" id="q1-degree" value="Degree Granting">Degree-granting </label>
+		</div>
+		<div class="answer-choice">
+			<label for="q1-non-degree"><input type="checkbox" name="question" id="q1-non-degree" value="None degree granting">Non-degree-granting </label>
+		</div>
+		<div class="answer-choice">
+			<label for="q1-reli"><input type="checkbox" name="question" id="q1-reli" value="Religious">Religious </label>
+		</div>
+		<div class="answer-choice">
+			<label for="q1-voc"><input type="checkbox" name="question" id="q1-voc" value="Career-vocational">Career-vocational </label>
+		</div>
+    </div>
+    
+
+    <!-- Screen 2; Q2 -->
+
+	<div class="item col-lg-8">
+		<h4 class="uppercase">Is your institution accredited by an agency recognized by BOTH the U.S. Department of Education and the New Mexico Higher Education Department?</h4>
+		<div class="accordion" id="accordion1">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne"><i class="fa fa-chevron-circle-right"></i> Currently non-accredited but planning to work towards accreditation?</p>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+						Unaccredited institutions may go through the authorization process, but must demonstrate a plan to become accredited within three years. If your institution can meet this criteria, select "yes." For a full list of agencies are recognized by the U.S. Department of Education visit: http://www2.ed.gov/admins/finaid/accred/accreditation_pg6.html 
+					</div>
+				</div>
+			</div>
+		</div>
+	    <p class="question-prompt"><span class="question-number">2. </span>If your institution can meet this criteria, select <strong> "yes" </strong>. </p>
+		<div class="answer-choice">
+			<label for="q2-yes"><input type="checkbox" name="question" id="q2-yes">Yes</label>
+		</div>
+		<div class="answer-choice">
+			<label for="q2-no"><input type="checkbox" name="question" id="q2-none">No</label>
+		</div>
+	</div>
+
+    <!-- Screen 3; Q3 -->
+
+	<div class="item col-lg-8">
+    	<h4 class="uppercase">Do you employ any agents who provide organized, consistent, on-the-ground recruiting to residents of New Mexico?</h4>
+    	<div class="accordion" id="accordion2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="fa fa-chevron-circle-right"></i> What about agents that provide occasional recruiting?</p>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+						For ONLY occasional recruiting of students outside of your institution's home state (i.e. job fairs in New Mexico) by your institution's employees or agents, Select "No".If agents recruit at re-occuring events, select "Yes". 
+					</div>
+				</div>
+			</div>
+		</div>
+        <p class="question-prompt"><span class="question-number">3. </span>If your institution can meet this criteria, select <strong> "yes" </strong>.</p>
+		<div class="answer-choice">
+			<label for="q3-yes"><input type="checkbox" name="question" id="q3-yes">Yes, <input type="number" name="agents" id="agents"></label><span class="option-explanation"></span>
+		</div>
+		<div class="answer-choice">
+			<label for="q3-no"><input type="checkbox" name="question" id="q3-no">No, employee any agents who provide organized, consistent, on-the-ground recruiting of students in New Mexico</label><span class="option-explanation"></span>
+		</div>
+	</div>
+
+	<!-- Screen 4; Q4 -->
+
+	<div class="item col-lg-8">
+		<h4 class="uppercase">Does your institution offer programs that lead to licensure?</h4>
+		<div class="accordion" id="accordion3">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree"><i class="fa fa-chevron-circle-right"></i> Why is this important for state authorization? </p>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+						In some cases, programs that are offered require programmatic approval in New Mexico by an external body in addition to institutional state authorization approval. If your institution offers any of these kinds of programs, this will trigger regulatory action with the New Mexico Higher Education Department. 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="accordion" id="accordion4">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour"><i class="fa fa-chevron-circle-right"></i> More on licensure and the New Mexico Higher Education Department (NMHED). </p>
+				</div>
+				<div id="collapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+						In addition to the programs listed that require external program approval, there are 29 Boards and Commissions Divisions that provide professional licensure and may have jurisdiction over the respective programs and institutions offering such programs. At times an institution may be under both, the oversight of NMHED and a board. If the institution is offering programs not falling under the jurisdiction of the particular board or department, responsible for the institution's oversigt, then the oversight responsibility falls to NMHED. 
+					</div>
+				</div>
+			</div>
+		</div>
+	    <p class="question-prompt"><span class="question-number">4. </span>If your institution offers any of these programs that lead to licensure, select "yes": Teacher Education; Nursing Cosmetology; Acupuncture and Oriental Medicine; Massage Therapy; Private Investigations; and, Allied Health Professions.</p>
+		<div class="answer-choice">
+			<label for="q4-yes"><input type="checkbox" name="question" id="q4-yes" class="apply calculus1">Yes</label>
+		</div>
+		<div class="answer-choice">
+			<label for="q4-no"><input type="checkbox" name="question" id="q4-no">No</label>
+		</div>
+		<div class="answer-choice">
+			<label for="q4-dunno"><input type="checkbox" name="question" id="q4-dunno">Do not know</label>
+		</div>
+	</div>
+
+<!-- Screen 5; Q5-->	
+
+					 <div class="item col-lg-8 q5">
+	                	<h4 class="uppercase">Does your institution offer any of the following in New Mexico?</h4>
+	                    <p class="question-prompt"><span class="question-number">5. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q5-seminars"><input type="checkbox" name="question" id="q5-seminars" class="apply"> Host short-term, face-to-face seminars or conferences?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-intern"><input type="checkbox" name="question" id="q5-intern" class="apply">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by your institution?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-independent"><input type="checkbox" name="question" id="q5-independent" class="apply">Permit a student to complete an internship, externship, field experience, or clinical practicum organized by the student acting independently?</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-no"><input type="checkbox" name="question" id="q5-no" class="calculus2">None of the above</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q5-dunno"><input type="checkbox" name="question" id="q5-dunno">Do not know </label>
+						</div>
+					</div>
+
+		<!-- Screen 6; Q6-->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">Do you provide educational offerings that require students to physically meet in New Mexico for instructional purposes that can be characterized by ANY of the following: (a) students are required to meet for 40 or more hours?; (b) the educational offering costs $500 or more?; AND/OR (c) the educational offering is required as part of a sequence or series of courses?</h4>
+	                	<div class="accordion" id="accordion5">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+								<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion5" href="#collapseFive"><i class="fa fa-chevron-circle-right"></i> I'm confused. What does this mean?</p>
+								</div>
+								<div id="collapseFive" class="accordion-body collapse">
+								<div class="accordion-inner">
+								In New Mexico, any educational offering by an out-of-state institutuion will trigger a need for authorization if the educational offering requires that students meet physically AND if the offering costs $500 or more AND/OR meets for 40 or more total hours AND/OR is required as part of a sequence or series of courses.
+								</div>
+								</div>
+							</div>
+						</div>
+	                    <p class="question-prompt"><span class="question-number">6. </span> Select one option. </p>
+						<div class="answer-choice">
+							<label for="q6-yes"><input type="checkbox" name="question" id="q6-yes" class="apply calculus1"> Yes </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q6-no"><input type="checkbox" name="question" id="q6-no" class="calculus2"> No</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q6-dunno"><input type="checkbox" name="question" id="q6-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 7; Q7-->
+
+					<div class="item col-lg-8 q7">
+	                	<h4 class="uppercase">Does your insitution maintain any of the following in New Mexico?</h4>
+	                    <p class="question-prompt"><span class="question-number">7. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q7-physical"><input type="checkbox" name="question" id="q7-physical" class="apply"> a location (physical building) that is used for instructional activity </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-non-instructional"><input type="checkbox" name="question" id="q7-non-instructional" class="apply"> a location (physical building) that is used only for non-instructional activities (administration,staff, recruitment, etc.) </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-both"><input type="checkbox" name="question" id="q7-both" class="apply"> a location (physical building) that is used for BOTH, instructional and non-instructional activity? </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-equipment"><input type="checkbox" name="question" id="q7-equipment" class="apply"> computer servers or other equipment? </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-out"><input type="checkbox" name="question" id="q7-out" class="apply"> any out-of-state addresses or phone numbers, regardless of use ? </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-enrollment"><input type="checkbox" name="question" id="q7-enrollment" class="apply"> a physical site, operated by your institution, that provides information to students for the purpose of enrollment (alone or in addition to other activities)? </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-support"><input type="checkbox" name="question" id="q7-support" class="apply"> a physical site, operated by the institution that provides student support services (alone or in adittion to other activities)? </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-no"><input type="checkbox" name="question" id="q7-no" class="calculus2"> None of the above </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q7-dunno"><input type="checkbox" name="question" id="q7-dunno"> Do not know </label>
+						</div>
+					</div>
+
+		<!-- Screen 8; Q8 -->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">Does your institution have a contract/agreement with a New Mexico educational institution or a New Mexico entity (i.e., library, gym, computer center, etc.) to provide services for your insitution's students (i.e., library, gym, computer center, etc.)?</h4>
+	                    <p class="question-prompt"><span class="question-number">8. </span> Select one option. </p>
+						<div class="answer-choice">
+							<label for="q8-yes"><input type="checkbox" name="question" id="q8-yes" class="apply calculus1"> Yes, my institution has one or more of the types of agreements listed above </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q8-no"><input type="checkbox" name="question" id="q8-no" class="calculus2"> No</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q8-dunno"><input type="checkbox" name="question" id="q8-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 9; Q9-->	
+
+					<div class="item col-lg-8 q9">
+	                	<h4 class="uppercase">Does your institution advertise in any of the following outlets?</h4>
+	                    <p class="question-prompt"><span class="question-number">9. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q9-print"><input type="checkbox" name="question" id="q9-print" class="apply"> A local (New Mexico) print outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-radio"><input type="checkbox" name="question" id="q9-radio" class="apply"> A local (New Mexico) radio outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-tv"><input type="checkbox" name="question" id="q9-tv" class="apply"> A local (New Mexico) television outlet </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-no"><input type="checkbox" name="question" id="q9-no" class="calculus2"> None of the above</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q9-dunno"><input type="checkbox" name="question" id="q9-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 10; Q10-->	
+
+					<div class="item col-lg-8 q10">
+	                	<h4 class="uppercase">In New Mexico, does your institution employ any of the following?</h4>
+	                    <p class="question-prompt"><span class="question-number">10. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q10-full"><input type="checkbox" name="question" id="q10-full" class="apply"> Full-time (i.e., non-adjunct) faculty to provide instruction via distance education programs to students in New Mexico </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-adjunct"><input type="checkbox" name="question" id="q10-adjunct"> Adjunct faculty in Wyoming to provide instruction via distance education programs to students in New Mexico </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-fullwyo"><input type="checkbox" name="question" id="q10-fullwyo" class="apply"> Full-time (i.e., non-adjunct) faculty in Wyoming to provide instruction via distance education programs solely to students outside of New Mexico </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-adjwyo"><input type="checkbox" name="question" id="q10-adjwyo" class="apply"> Adjunct faculty in Wyoming to provide instruction via distance education programs solely to students outside New Mexico </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-no"><input type="checkbox" name="question" id="q10-no" class="calculus2"> None of the above</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q10-dunno"><input type="checkbox" name="question" id="q10-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 11; Q11 -->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">Does your institution offer any distance education programs (including online or correspondence study programs) that enroll New Mexico residents?</h4>
+	                	<div class="accordion" id="accordion6">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion6" href="#collapseSix"><i class="fa fa-chevron-circle-right"></i> Does the extent to which a distance education program is offerred online matter for authorization in New Mexico?</p>
+								</div>
+								<div id="collapseSix" class="accordion-body collapse">
+									<div class="accordion-inner">
+										Regardless of whether you have a program that is 10% distance education or 100%, you should indicate yes below.  
+									</div>
+								</div>
+							</div>
+						</div>
+	                    <p class="question-prompt"><span class="question-number">11. </span> If your institution offers any format of a distance education offering that enrolls New Mexico students, check "yes". </p>
+						<div class="answer-choice">
+							<label for="q11-yes"><input type="checkbox" name="question" id="q11-yes" class="apply calculus1"> Yes </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q11-no"><input type="checkbox" name="question" id="q11-no" class="calculus2"> No</label>
+						</div>
+						<div class="answer-choice">
+							<label for="q11-dunno"><input type="checkbox" name="question" id="q11-dunno">Do not know</label>
+						</div>
+					</div>
+
+		<!-- Screen 12; Q12-->	
+
+					<div class="item col-lg-8" id="q12">
+	                	<h4 class="uppercase"> Does your program or institution meet at least one of the 8 conditions for exemption?</h4>
+	                    <div class="accordion" id="accordion7">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven"><i class="fa fa-chevron-circle-right"></i> Do you have proof of eligibility for exemption?</p>
+								</div>
+								<div id="collapseSeven" class="accordion-body collapse">
+									<div class="accordion-inner">
+										If your program or institution qualifies for exemption with the New Mexico Department of Higher Education, you will need to provide proof that you meet one of the 8 conditions. 
+									</div>
+								</div>
+							</div>
+						</div>
+	                    <p class="question-prompt"><span class="question-number">12. </span> Select all that apply. </p>
+						<div class="answer-choice">
+							<label for="q12-second"><input type="checkbox" name="question" id="q12-second"> Your Institution is a post-secondary educational institution that is established by name as an educational institution by the state through a charter, constitutional provision or other action and is supported in whole or in part by state or local taxation;  </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-indian"><input type="checkbox" name="question" id="q12-indian">  Your Institution is funded in full or in part by an Indian tribe or pueblo in the state of New Mexico; </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-trade"><input type="checkbox" name="question" id="q12-trade">  Institution is an occupational, trade, or professional school operating pursuant to any New Mexico Occupational licensing law under the jurisdiction of the New Mexico Regulation and Licensing Department; </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-training"><input type="checkbox" name="question" id="q12-training"> Your Insitution consists of courses of instruction provided by an employer for its employees for training purposes; </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-frat"><input type="checkbox" name="question" id="q12-frat"> You have a course of instruction or study sponsored by a recognized fraternal, trade, business, or professional organization or labor union for the instruction of its members; </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-org"><input type="checkbox" name="question" id="q12-org"> Organization provides only brief courses of instruction designed to teach specific skills that may be applicable in a work setting but are not sufficient in themselves to be considered programs of training in employment. Normally, such instruction shall meet at least three criteria: (a) No more than 40 hours of direct instruction, (b) Tuition/fee for each course does not exceed $500, and (c) The student normally enrolls for only one course rather than a sequence of courses; </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-exclu"><input type="checkbox" name="question" id="q12-exclu"> Your Institution exclusively offers education that is solely avocational or recreational in nature; and/or, </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-chart"><input type="checkbox" name="question" id="q12-chart"> Institution is a chartered, nonprofit religious institutions whose sole purpose is to train students in religious disciplines to prepare them to assume a vocational objective relating primarily to religion (501(c)3 IRS status letter required). </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q12-no"><input type="checkbox" name="question" id="q12-no"> None of the above.</label>
+						</div>
+					</div>
+
+		<!-- Screen 13; Q13-->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">Is your institution part of a multi-insitutition system (example: State University of New York - SUNY)?</h4>
+	                    <p class="question-prompt"><span class="question-number">13. </span> Select one option. </p>
+						<div class="answer-choice">
+							<label for="q13-yes"><input type="checkbox" name="question" id="q13-yes"> Yes </label>
+						</div>
+						<div class="answer-choice">
+							<label for="q13-no"><input type="checkbox" name="question" id="q13-no"> No </label>
+						</div>
+					</div>
+
+		<!-- Screen 14; Q14-->	
+
+					<div class="item col-lg-8">
+	                	<h4 class="uppercase">What is your institution's anticipated or actual gross annual tuition and fee revenue in New Mexico?</h4>
+	                	<div class="accordion" id="accordion8">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<p class="accordion-toggle why-ask" data-toggle="collapse" data-parent="#accordion8" href="#collapseEight"><i class="fa fa-chevron-circle-right"></i> How to calculate?</p>
+								</div>
+								<div id="collapseEight" class="accordion-body collapse">
+									<div class="accordion-inner">
+										If your institution has generated tutition and fee revenue in New Mexico in the last completed academic year, provide this total. Otherwise, estimate as best as you can the anticipated gross annual tuition and fee revenue for New Mexico related activity for your institution.
+									</div>
+								</div>
+							</div>
+						</div>
+	                    <p class="question-prompt"><span class="question-number">14. </span> Please give us a specific number: </p>
+						<div class="answer-choice">
+							<label for="q14-yes"><input type="checkbox" name="question" id="q14-yes">$<input type="number" name="revenue" id="revenue" max="9999999" min="0" /></label> <!--XXXX (client should enter dollar amount). Field should be constrained to max $XXX, XXX,XXX.00 and minimum $0.00-->
+						</div>
+					<div class="col-lg-8 text-center">
+						<br><br>
+							<button class="button button-big button-border-light button-generate-report">Generate Report</button>
+						</div>
+					</div>
+            	</div>
+
+            	<div class="custom-navigation-buttons">
+				  <a class="btn prev prev-verify">Previous</a>
+				  <a class="btn next next-verify">Next</a><br>
+				  <span class="error-message"></span>
+				</div>
+        	</div>
+        </section>
+
+
+{% include "report.html" %}
+
+{% endblock %}
