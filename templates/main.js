@@ -39,6 +39,22 @@ jQuery(document).ready(function($) {
     });
     wow.init();
 
+       //OWLCAROUSEL TEAM
+    $("#team-slider").owlCarousel({
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        autoPlay: true,
+        singleItem: false,
+        items: 3,
+        itemsDesktop: [1200, 3],
+        itemsDesktopSmall: [980, 3],
+        itemsTablet: [768, 2],
+        itemsMobile: [479, 1],
+        pagination: true,
+        navigation: true, // Show next and prev buttons
+        navigationText: ['<i class="pe-7s-angle-left-circle pe-3x"></i>', '<i class="pe-7s-angle-right-circle pe-3x"></i>'],
+    });
+
 
     // ---------------------------ADIVOSOR CAROUSEL
     var questionnaire = $("#questionnaire-carousel");
@@ -98,7 +114,7 @@ jQuery(document).ready(function($) {
                     }
                     if (x==8){generatereport("report-no-action")}
                 }
-                if ([3, 4, 5, 6].indexOf(current_page) > -1) { //Check that at least one checkbox has been checked in slides 3, 4, 5, 6, 7
+                if ([3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].indexOf(current_page) > -1) { //Check that at least one checkbox has been checked in slides 3, 4, 5, 6, 7
                     if (min_selected(current_page)) {
                         go_to_page(current_page + 1)
                     } else {
@@ -195,11 +211,11 @@ jQuery(document).ready(function($) {
                         if ($('input[class="q10 apply"]:checked')){$('#q10-true').show()}
                         if ($('#q11-yes').prop('checked')){$('#q11-true').show();$('#register-institution').show()}
                         if ($('#q14-yes').prop('checked')){$('#q14-true').show()}
-                        $('#revenue_text').append(revenue);
+                        $('#revenue_text').text(revenue);
                         
-                        if (revenue > 1000000) { $('#fee').append("$5,000");} else if (1000000 >= revenue > 500000){$('#fee').append("$3,000");
-                        }else if (500000 >=revenue > 250000){$('#fee').append("$2,000");} else if (250000 >= revenue > 50000){$('#fee').append("$1,000");
-                        } else if (revenue < 50000){$('#fee').append("$500");}
+                        if (revenue > 1000000) { $('#fee').text("$5,000");} else if (1000000 >= revenue > 500000){$('#fee').text("$3,000");
+                        }else if (500000 >=revenue > 250000){$('#fee').text("$2,000");} else if (250000 >= revenue > 50000){$('#fee').text("$1,000");
+                        } else if (revenue < 50000){$('#fee').text("$500");}
 
                         if ($('input[class="calculus1"]:checked')){
                             $('#calculus').text(1000+ ($("#agents").val() * 200));
@@ -210,7 +226,7 @@ jQuery(document).ready(function($) {
                             var bond_fee =0
                             if ($('#q1-non-degree').prop('checked')){license_fee=1000} else if ($('#q1-degree').prop('checked')){license_fee=4000}
                             if ((.20 * revenue) < 5000){bond_fee=5000} else {bond_fee = (.20 * revenue)}
-                            $('#calculus').append(license_fee+bond_fee+250)
+                            $('#calculus').text(license_fee+bond_fee+250)
                             // $("#calculator2").show();
                            
                         }
@@ -220,7 +236,6 @@ jQuery(document).ready(function($) {
                     }
                 }
 
-                // ---- For the Fee calculator ------------
                 $('body').on('click', '#getvalueC1', function() {
 
                      $('#formula1').text(1000+(200 * $("#agentsV").val()))
@@ -234,6 +249,7 @@ jQuery(document).ready(function($) {
                     if ((.20 * revenueC2) < 5000){sum=5000} else {sum = (.20 * revenueC2)}
                     $('#formula2').text(license_fee + 250 + sum)
                 });
+
               
                 $('#report').show();
                 $('html, body').animate({
@@ -278,3 +294,28 @@ jQuery(document).ready(function($) {
     });
 
 });
+
+// Show SARA states
+$("#clickme").click(function(){
+  $("#stateList").toggle();
+});
+
+//SARA Calculator
+// a) IF less than 2,500 THEN $2000 + $5000
+// b) IF 2,500 - 9,999 THEN $4,000 + $5000
+// c) IF exactly 10,000 THEN $6000 + $5000
+// d) IF 10,0001-20,000 THEN $6000 + $10,000
+// e) IF 20,001-40,000 THEN $6000 + $20,000
+// f) IF more than 40,000 THEN $6000 + $30,000
+
+
+                  $('body').on('click', '#getvalueSC1', function() {
+                    var SaraValue = $("#SaraInput").val();
+                    if (SaraValue<=2500) {
+                        $('#SaraFee').text('Your Fee: $7,000')} else if (2500<SaraValue<9999){
+                        $('#SaraFee').text('Your Fee: $9,000')}else if (SaraValue==10000){
+                        $('#SaraFee').text('Your Fee: $11,000')}else if (10001<SaraValue<=20000){
+                        $('#SaraFee').text('Your Fee: $16,000')}else if (20000<SaraValue<=40000){
+                        $('#SaraFee').text('Your Fee: $26,000')}else if (SaraValue>40000){
+                        $('#SaraFee').text('Your Fee: $36,000')}
+                });
