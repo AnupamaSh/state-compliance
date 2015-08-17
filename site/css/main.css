@@ -1430,3 +1430,8 @@ td {
     height:20px;
     background-color: #ffffff;
 }
+
+#dialog-form td {
+
+padding: 5px 0;
+}
