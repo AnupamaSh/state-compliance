@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="css/owl.theme.css">
         <link href="//d3q1ytufopwvkq.cloudfront.net/0.3.5/formrenderer.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 
         <!-- Font -->
@@ -489,15 +490,41 @@
 						</div>
 					<div class="col-lg-8 text-center">
 						<br><br>
-							<button class="button button-big button-border-light button-generate-report">Generate Report</button>
+							<button class="button button-big button-border-light button-generate-report">Generate Report</button><br><br><br>
+					
+							<a id="create-user">Invite someone to review answers</a>
+
 						</div>
+
+
+							<div id="dialog-form" title="Invite someone to review answers">
+							 <form>
+							    <fieldset>
+							     <table><tr>
+									<td>Name</td><td><input type="text"></td></tr>
+									<tr><td>Email</td><td><input type="email"></td></tr>
+									<tr><td>Permission level</td><td><select>
+									<option value="AL">Can view responses</option>
+									<option value="AL">Can review assigned responses</option>
+									<option value="AL">Can review assigned all responses</option>
+									<option value="AL">administrator</option>
+									</select></td></tr>
+									<tr><td>Organization</td><td><input type="checkbox">Add this user to my organzation</td></tr>
+								</table>
+
+							      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+							      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+							    </fieldset>
+							  </form>
+
+							</div>
 					</div>
             	</div>
 
             	<div class="custom-navigation-buttons">
 				  <a class="btn prev prev-verify">Previous</a>
 				  <a class="btn next next-verify">Next</a><br>
-				  <a style="float:right;padding-right:30px;color:red">Report Answer</a>
+				  <a style="float:right;padding-right:30px;color:red" href="mailto:feedback@thegovlab.org">Report Answer</a>
 				  <span class="error-message"></span>
 				</div>
         	</div>
@@ -793,6 +820,9 @@ $1000 (initial registration fee) + $200 x  (Number of agents)<input type="number
         
         <script src="js/main.js"></script>
         
+
+<!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         
         <!-- GOOGLE ANALYTICS 
         <script>
